@@ -104,7 +104,11 @@
                     padding: 10px;
 
                     height: 50%;
-                    width: 100%;
+                    width: 25%;
+                }
+
+                #header-main-button-field button.selected {
+                    border-bottom: 3px solid #03A800;
                 }
 
                     #header-main-button-field button svg {
@@ -454,6 +458,10 @@
                     font-size: 15px;
                 }
 
+                    #post-content img {
+                        width: 100%;
+                    }
+
                 #post-metadata {
                     display: flex;
 
@@ -496,6 +504,10 @@
 
                         margin-right: 10px;
                     }
+
+                .post-heart-icon:hover * {
+                    fill: #FF0000;
+                }
                 
                 #comment-field {
                     display: flex;
@@ -607,7 +619,7 @@
             position: fixed;
 
             max-width: calc(25% - 30px);
-            height: 80%;
+            height: calc(80% - 20px);
             /* width: 100%;
             
 
@@ -777,7 +789,7 @@
     }
 
     #home {
-        padding-top: 20vh;
+        padding-top: 25vh;
     }
 
     #header-block {

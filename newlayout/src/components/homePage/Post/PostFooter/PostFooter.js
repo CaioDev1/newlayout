@@ -3,6 +3,8 @@ import React, {useState} from 'react'
 import CommentField from './CommentField/CommentField'
 import PublicComments from './PublicComments/PublicComments'
 
+import {Grow} from '@material-ui/core'
+
 function PostFooter() {
     const [whichButtonClicked, setWhichButtonClicked] = useState(undefined)
 
@@ -11,18 +13,20 @@ function PostFooter() {
             return <CommentField setWhichButtonClicked={setWhichButtonClicked} /> */
         case 'comments':
             return (
-                <div id='public-comments-field'>
-                    <hr />
-                    <PublicComments />
-                    <PublicComments />
-                    <PublicComments />
-                    <CommentField setWhichButtonClicked={setWhichButtonClicked} />
-                </div>
+                <Grow in={true} timeout={500}>
+                    <div id='public-comments-field'>
+                        <hr />
+                        <PublicComments />
+                        <PublicComments />
+                        <PublicComments />
+                        <CommentField setWhichButtonClicked={setWhichButtonClicked} />
+                    </div>
+                </Grow>
             )
         default:
             return (
                 <div id='post-footer'>
-                    <button>
+                    <button className='post-heart-icon'>
                         <svg width="32" height="28" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M30.6351 5.72253C30.1508 4.6027 29.4526 3.58792 28.5795 2.73499C27.7057 1.87953 26.6755 1.1997 25.5448 0.732478C24.3724 0.246076 23.115 -0.00289296 21.8454 2.53611e-05C20.0644 2.53611e-05 18.3267 0.487124 16.8166 1.4072C16.4553 1.6273 16.1121 1.86904 15.787 2.13244C15.4618 1.86904 15.1186 1.6273 14.7574 1.4072C13.2473 0.487124 11.5095 2.53611e-05 9.7285 2.53611e-05C8.44599 2.53611e-05 7.20323 0.245379 6.02911 0.732478C4.89473 1.20154 3.87234 1.87626 2.99446 2.73499C2.12017 3.58696 1.42178 4.60198 0.938839 5.72253C0.436676 6.88796 0.180176 8.12556 0.180176 9.39923C0.180176 10.6007 0.425838 11.8528 0.913551 13.1264C1.32178 14.1908 1.90704 15.2949 2.65486 16.4098C3.83982 18.1742 5.46914 20.0144 7.49225 21.8798C10.8448 24.972 14.1649 27.108 14.3058 27.1946L15.162 27.743C15.5413 27.9848 16.029 27.9848 16.4083 27.743L17.2646 27.1946C17.4054 27.1044 20.7219 24.972 24.0781 21.8798C26.1012 20.0144 27.7305 18.1742 28.9155 16.4098C29.6633 15.2949 30.2521 14.1908 30.6568 13.1264C31.1445 11.8528 31.3901 10.6007 31.3901 9.39923C31.3938 8.12556 31.1373 6.88796 30.6351 5.72253ZM15.787 24.889C15.787 24.889 2.92581 16.6588 2.92581 9.39923C2.92581 5.72253 5.97131 2.74221 9.7285 2.74221C12.3694 2.74221 14.6598 4.21433 15.787 6.36478C16.9141 4.21433 19.2046 2.74221 21.8454 2.74221C25.6026 2.74221 28.6481 5.72253 28.6481 9.39923C28.6481 16.6588 15.787 24.889 15.787 24.889Z" fill="#F2F2F2" fill-opacity="0.8"/>
                         </svg>

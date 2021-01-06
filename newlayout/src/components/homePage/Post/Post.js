@@ -3,7 +3,7 @@ import React from 'react'
 import UserIcon from '../UserIcon'
 import PostFooter from './PostFooter/PostFooter'
 
-function Post() {
+function Post({hasImage}) {
     return (
     <div id='post'>
         <div id='post-header'>
@@ -15,9 +15,10 @@ function Post() {
         </div>
         <div id='post-body'>
             <svg width="28" height="23" viewBox="0 0 28 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M13.134 0.499999C13.5189 -0.166668 14.4811 -0.166667 14.866 0.5L26.9904 21.5C27.3753 22.1667 26.8942 23 26.1244 23H1.87564C1.10584 23 0.624719 22.1667 1.00962 21.5L13.134 0.499999Z" fill="#404040"/>
+                <path d="M13.1342 0.499999C13.5191 -0.166668 14.4814 -0.166667 14.8663 0.5L26.9906 21.5C27.3755 22.1667 26.8944 23 26.1246 23H1.87589C1.10609 23 0.624963 22.1667 1.00986 21.5L13.1342 0.499999Z" fill="#2A2A2A"/>
             </svg>
             <div id='post-content'>
+                {hasImage && <img src={process.env.PUBLIC_URL + '/Foto_Boi.png'} />}
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium dignissimos dicta aperiam, esse?</p>
             </div>
             <div id='post-metadata'>
