@@ -1,9 +1,11 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 import UserIcon from '../UserIcon'
 import PostFooter from './PostFooter/PostFooter'
 
 function Post({hasImage}) {
+    const [isImageClicked, setIsImageClicked] = useState(false)
+
     return (
     <div id='post'>
         <div id='post-header'>
@@ -18,7 +20,7 @@ function Post({hasImage}) {
                 <path d="M13.1342 0.499999C13.5191 -0.166668 14.4814 -0.166667 14.8663 0.5L26.9906 21.5C27.3755 22.1667 26.8944 23 26.1246 23H1.87589C1.10609 23 0.624963 22.1667 1.00986 21.5L13.1342 0.499999Z" fill="#2A2A2A"/>
             </svg>
             <div id='post-content'>
-                {hasImage && <img src={process.env.PUBLIC_URL + '/Foto_Boi.png'} />}
+                {hasImage && <img src={process.env.PUBLIC_URL + '/Foto_Boi.png'} onClick={() => setIsImageClicked(true)} />}
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium dignissimos dicta aperiam, esse?</p>
             </div>
             <div id='post-metadata'>
@@ -35,7 +37,14 @@ function Post({hasImage}) {
             </div>
             <PostFooter />
         </div>
-    </div>  
+        {
+            isImageClicked && (
+                <div id='post-image-screen' onClick={() => setIsImageClicked(false)} >
+                    <img src={process.env.PUBLIC_URL + '/Foto_Boi.png'} onClick={e => {e.stopPropagation()}} />
+                </div>
+            )
+        }
+    </div>
     )
 }
 

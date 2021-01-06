@@ -605,8 +605,38 @@
 
                                 #comment-body-info > *{
                                     margin-right: 10px;
-                                }
 
+                                    display: flex;
+
+                                    align-items: center;
+                                }
+                
+                #post-image-screen {
+                    display: flex;
+
+                    position: fixed;
+
+                    top: 0;
+                    left: 0;
+
+                    z-index: 100;
+
+                    padding: 5%;
+
+                    align-items: center;
+                    justify-content: center;
+
+                    height: 100vh;
+                    width: 100vw;
+
+                    backdrop-filter: blur(5px);
+
+                    background-color: rgba(0, 0, 0, 0.644);
+                }
+
+                    #post-image-screen img {
+                        height: 50vh;
+                    }
 
 
                     
@@ -809,5 +839,14 @@
     #post {
         width: 100%;
     }
+
+        #post-body {
+            width: 100%;
+        }
+
+            #public-comments-field {
+                padding-left: 0;
+                padding-right: 0;
+            }
 }
                     
