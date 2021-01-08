@@ -9,8 +9,8 @@ function App() {
     return (
         <Router basename='/'>
             <ul>
-                <li><Link to="/home">Home</Link></li>
-                <li><Link to="/profile-photo">Profile photo</Link></li>
+                <li style={{color: 'black'}}><Link to="/home">Home</Link></li>
+                <li style={{color: 'black'}}><Link to="/profile-photo">Profile photo</Link></li>
             </ul>
 
             <hr />
