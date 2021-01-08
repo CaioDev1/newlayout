@@ -38,7 +38,7 @@
         cursor: pointer;
     }
 
-    #user-bar, #messages-field, #newpost-field, #feed, #post-body, #trending-field, #trending-field-post-1, #trending-field-post {
+    #user-bar, #friends-field, #newpost-field, #feed, #post-body, #trending-field, #trending-field-post-1, #trending-field-post {
         border-radius: 15px;
     }
 
@@ -105,6 +105,8 @@
 
                     height: 50%;
                     width: 25%;
+
+                    position: relative;
                 }
 
                 #header-main-button-field button.selected {
@@ -114,6 +116,28 @@
                     #header-main-button-field button svg {
                         height: 25px;
                     }
+                        #notification-value-pop-up {
+                            position: absolute;
+
+                            font-weight: bold;
+
+                            left: 50%;
+                            top: 40%;
+
+                            display: flex;
+
+                            justify-content: center;
+                            align-items: center;
+
+                            background: #DE3D3D;
+
+                            border-radius: 100%;
+
+                            height: 20px;
+                            width: 20px;
+
+                            padding: 12px;
+                        }
 
             #header-main-input-field-body, #header-main-input-field-body input {
                 width: 100%;
@@ -141,11 +165,181 @@
                     background: transparent;
                 }
 
+        .button-expansion-block {
+            position: absolute;
+
+            padding: 15px;
+
+            display: flex;
+            flex-direction: column;
+
+            background: #F2F2F2;
+            
+            box-shadow: 4px 4px 65px rgba(0, 0, 0, 0.3);
+
+            border-radius: 15px;
+
+            z-index: 2;
+
+            overflow-y: scroll;
+
+            font-size: 0.8rem;
+        }
+
+        .button-expansion-block::-webkit-scrollbar {
+            display: none;
+        }
+
+            .button-expansion-block * {
+                color: #404040;
+            }
+
+            .button-expansion-block > * {
+                display: flex;
+
+                align-items: center;
+
+                width: 100%;
+            }
+
+            .header-main-side {
+                height: 400px;
+                width: 300px;
+
+                top: 100%;
+
+            }
+
+                .header-main-side #user-icon {
+                    margin-right: 15px;
+                }
+
+                #friend-requests-field {
+                    display: flex;
+
+                    flex-direction: column;
+                }
+
+                    #friend-requests-field-header {
+                        display: flex;
+
+                        width: 100%;
+
+                        justify-content: space-between;
+
+                        padding: 10px 0 5px;
+                    }
+
+                        #friend-requests-field-header a {
+                            color: #5A86C8;
+                        }
+
+                    #friend-requests {
+                        padding: 10px 0;
+                    }
+
+                    #notification {
+                        display: flex;
+
+                        flex-direction: column;
+
+                        margin-bottom: 20px;
+
+                        width: 100%;
+                    }
+
+                        #notification-header {
+                            display: flex;
+
+                            width: 100%;
+
+                            align-items: center;
+
+                            text-align: left;
+                        }
+
+                        #notification-date {
+                            color: #959595;
+
+                            font-size: 0.7rem;
+
+                            text-align: left;
+                        }
+
+                        #friend-request-buttons {
+                            display: flex;
+
+                            justify-content: center;
+
+                            margin-top: 10px;
+                            margin-left: 5%;
+                        }
+
+                            #friend-request-buttons button {
+                                padding: 5px 10px;
+
+                                min-width: 80px;
+
+                                margin-right: 5%;
+
+                                height: 100%;
+                            }
+
+                            #friend-request-button-accept {
+                                background: #5CC35A;
+
+                                color: #F2F2F2;
+
+                                border-radius: 10px;
+                            }
+
+                            #friend-request-button-denied {
+                                text-decoration: underline;
+                                color: #2E2E2E;
+                            }
+                
+                #button-expansion-block-title {
+                    justify-content: space-between;
+
+                    margin-bottom: 15px;
+                }
+
+                #expand-messages-button {
+                    background: #F2F2F2;
+
+                    display: flex;
+
+                    align-items: center;
+                    justify-content: center;
+
+                    box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.25);
+
+                    border-radius: 10px;
+
+                    width: 30px;
+                    height: 30px;
+                }
+
+                #generic-notifications-field {
+                    display: flex;
+
+                    flex-direction: column;
+                }
+            .header-right-side {
+                height: 150px;
+                width: 150px;
+
+                top: 110%;
+                right: -10%;
+
+                justify-content: flex-end;
+            }
+
         #header-right {
             justify-content: flex-end;
         }
 
-        #header-options {
+        #header-right-options {
             display: flex;
 
             align-items: center;
@@ -161,46 +355,13 @@
             position: relative;
         }
 
-            #header-options-body {
-                position: absolute;
+            /* DENTRO DO BUTTONEXPANSIONBLOCK */
+            
+            #header-right-options-exit {
+                font-weight: 700;
 
-                right: 100%;
-                top: 80%;
-
-                height: 150px;
-                width: 150px;
-
-                background: #F2F2F2;
-
-                border-radius: 15px;
-
-                z-index: 2;
-
-                display: flex;
-                flex-direction: column;
-
-                justify-content: flex-end;
-
-                padding: 15px;
-
-                filter: drop-shadow(0px 4px 50px rgba(0, 0, 0, 0.25));
+                justify-content: space-between;
             }
-
-                #header-options-body * {
-                    color: #404040;
-
-                    font-weight: 700;
-                }
-
-                #header-options-body > * {
-                    display: flex;
-
-                    align-items: center;
-
-                    width: 100%;
-
-                    justify-content: space-around;
-                }
 
 
     #left-block, #right-block {
@@ -218,9 +379,10 @@
             position: fixed;
 
             min-width: calc(25% - 30px);
+            max-height: calc(80% - 30px);
         }
 
-            #user-bar, #messages-field {
+            #user-bar, #friends-field {
                 width: 100%;
             }
 
@@ -240,13 +402,19 @@
                     margin-right: 10%;
                 }
 
-            #messages-field {
+            #friends-field {
                 background: #1F1E1E;;
+                
+                max-height: 50vh;
 
-                max-height: 40%;
+                overflow-y: scroll;
             }
 
-                #messages-field-header {
+            #friends-field::-webkit-scrollbar {
+                display: none;
+            }
+
+                #friends-field-header {
                     display: flex;
 
                     justify-content: space-between;
@@ -254,16 +422,16 @@
                     padding: 20px 20px 10px;
                 }
 
-                    #messages-field-header-title {
+                    #friends-field-header-title {
                         font-weight: 400;
                     }
 
-                #messages-field-data {
+                #friends-field-data {
                     padding: 15px 20px;
-                    padding-right: 40px;
+                    padding-right: 30px
                 }
 
-                    #message-content {
+                    #friends-content {
                         display: flex;
 
                         align-items: center;
@@ -273,7 +441,17 @@
                         margin-bottom: 20px;
                     }
 
-                        #message-content-online-status {
+                        #friends-content-info {
+                            display: flex;
+
+                            align-items: center;
+                        }
+
+                            #friends-content-info #user-icon {
+                                margin-right: 20px;
+                            }
+
+                        #friends-content-online-status {
                             height: 10px;
                             width: 10px;
 
@@ -589,7 +767,7 @@
 
 
                             #comment-body p {
-                                font-size: 12px;
+                                font-size: 14px;
 
                                 width: 95%;
                             }
@@ -649,16 +827,7 @@
             position: fixed;
 
             max-width: calc(25% - 30px);
-            height: calc(80% - 20px);
-            /* width: 100%;
-            
-
-            right: 0%;          
-             */
-            /* display: flex;
-            flex-direction: column;
-
-            justify-content: start; */
+            max-height: calc(80% - 20px);
 
             overflow-y: scroll;
 
@@ -701,9 +870,9 @@
                 #trending-field-post-1 {
                     flex-direction: row;
 
-                    padding: 5% 20% 5%;
+                    padding: 5% 15%;
 
-                    height: 150px;
+                    height: 170px;
 
                     position: relative;
                 }
@@ -743,11 +912,18 @@
                             font-size: 13px;
                         }
 
+                        #trending-field-post-1 p {
+                            font-size: 0.9rem;
+
+                            overflow: hidden;
+                        }
+
                         #trending-field-post-1-like-field {
                             position: absolute;
-                            right: 5px;
 
-                            transform: translateY(120%);
+                            top: 50%;
+                            right: 4%;
+                            
 
                             font-size: 1rem;
                         }
@@ -764,7 +940,7 @@
                         }
 
                 #trending-field-post {
-                    height: 15%;
+                    height: 100px;
 
                     padding: 5px;
                 }
