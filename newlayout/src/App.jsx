@@ -10,7 +10,7 @@ function App() {
     return (
         <Router>
             <Route exact path='/profile-photo' component={ProfilePhotoPage} />
-            <Route exact path='/home' component={HomePage} />
+            <Route exact path='/' component={HomePage} />
             <Route exact path='/login' component={() => <LoginRegisterPage page='login' />} />
             <Route exact path='/register' component={() => <LoginRegisterPage page='register' />} />
         </Router>

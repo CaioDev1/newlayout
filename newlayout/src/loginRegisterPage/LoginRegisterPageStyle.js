@@ -209,10 +209,6 @@ const LoginRegisterStyle = styled.main`
     }
 
     #createButton {
-        background: #1F1E1E;
-
-        color: white;
-
         position: relative;
     }
 
@@ -243,6 +239,12 @@ const LoginRegisterStyle = styled.main`
             form button {
                 margin-top: 20px;
             }
+
+        #enterButton {
+            background: #1F1E1E;
+
+            color: white;
+        }
 
         #createButtton * {
             color: #F2F2F2;
