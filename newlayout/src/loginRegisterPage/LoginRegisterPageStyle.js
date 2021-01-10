@@ -1,16 +1,11 @@
 import styled, { css } from 'styled-components'
 
 const LoginRegisterStyle = styled.main`
-    main {
-        min-width: 700px;
-        min-height: 600px;
-    }
-
-    main * {
+    * {
         font-family: 'Roboto Slab', sans-serif;
     }
 
-    main {
+    article {
         display: flex;
 
         justify-content: center;
@@ -20,10 +15,6 @@ const LoginRegisterStyle = styled.main`
         width: 100vw;
 
         padding: 10%;
-    }
-
-    main section {
-        min-height: 80%;
     }
 
     .bar {
@@ -86,7 +77,9 @@ const LoginRegisterStyle = styled.main`
 
         background: #2A2A2A;
 
-        border-radius: 5px;
+        border-radius: 50px;
+
+        border: none;
     }
 
     section.secRight {
@@ -99,6 +92,14 @@ const LoginRegisterStyle = styled.main`
         justify-content: center;
 
         width: 50%;
+    }
+
+    section.secRight hr {
+        width: 100%;
+        
+        height: 0px;
+
+        border: 1px solid rgba(0, 0, 0, 0.2);
     }
 
     #alternative-transition {
@@ -116,12 +117,6 @@ const LoginRegisterStyle = styled.main`
     }
 
         #alternative-transition hr {
-            width: 100%;
-
-            height: 0px;
-
-            border: 1px solid rgba(0, 0, 0, 0.2);
-
             margin: 0 20px;
         }
 
@@ -160,7 +155,7 @@ const LoginRegisterStyle = styled.main`
         color: #000000;
     }
 
-    button {
+    button, a {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -234,11 +229,14 @@ const LoginRegisterStyle = styled.main`
                 border-bottom: 3px solid #1F1E1E;
 
                 text-align: center;
+
+                margin-bottom: 10px;
             }
 
-            form button {
-                margin-top: 20px;
-            }
+
+        .buttonArea hr {
+            margin: 20px 0px;
+        }
 
         #enterButton {
             background: #1F1E1E;
@@ -246,7 +244,7 @@ const LoginRegisterStyle = styled.main`
             color: white;
         }
 
-        #createButtton * {
+        #createButton * {
             color: #F2F2F2;
         }
 
@@ -297,6 +295,12 @@ const LoginRegisterStyle = styled.main`
             margin-top: 10%;
         }
 
+            #createButton {
+                background: #1F1E1E;
+
+                color: #FFFFFF;
+            }
+
             #backButton {
                 text-decoration: underline;
 
@@ -319,6 +323,17 @@ const LoginRegisterStyle = styled.main`
         }
     `
     }
+
+@media screen and (max-width: 800px) {
+    article {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+        article > section {
+            min-width: 100%;
+        }
+}
 `
 
 export default LoginRegisterStyle

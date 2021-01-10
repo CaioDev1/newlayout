@@ -2,11 +2,13 @@ import React from 'react'
 
 import BaseStyle from './LoginRegisterPageStyle'
 
+import {Link} from 'react-router-dom'
+
 function LoginRegisterPageBase({page}) {
     return (
     <BaseStyle page={page}>
         <header className="bar"></header>
-        <main>
+        <article>
             <section className="secLeft">
                 <div className="title">
                     {
@@ -77,23 +79,24 @@ function LoginRegisterPageBase({page}) {
                             page == 'login' ? (
                                 <>
                                     <button id='enterButton'>Entrar</button>
-                                    <button id='createButton'>
+                                    <hr />
+                                    <Link to='/register' id='createButton'>
                                         <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M6.53906 19.4336V12.6484H0.597656V7.41016H6.53906V0.800781H12.2871V7.41016H18.1406V12.6484H12.2871V19.4336H6.53906Z" fill="#1241A3"/>
                                         </svg>   
                                         Criar nova conta            
-                                    </button>
+                                    </Link>
                                 </>
                             ) :
                             <>
-                                <button id='backButton' className="half left">Voltar</button>
+                                <Link to='/login' id='backButton' className="half left">Voltar</Link>
                                 <button id='createButton' className="half right">Cadastre-se</button>
                             </>
                         }
                     </div>
                 </form>
             </section>
-        </main>
+        </article>
         <footer className="bar"></footer>
     </BaseStyle>
     )
