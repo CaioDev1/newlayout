@@ -1,6 +1,6 @@
 import React from 'react'
 
-import UserIcon from '../../../homePage/UserIcon'
+import UserIcon from '../../../pages/homePage/UserIcon'
 
 function Notification({children, type}) {
     return (

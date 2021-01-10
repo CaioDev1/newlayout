@@ -1,23 +1,18 @@
 import React from 'react'
 
-import {HashRouter as Router, Route, Link} from 'react-router-dom'
+import {BrowserRouter as Router, Route} from 'react-router-dom'
 
 import HomePage from './homePage/HomePage'
 import ProfilePhotoPage from './profilePhotoPage/ProfilePhotoPage'
+import LoginRegisterPage from './loginRegisterPage/LoginRegisterPage'
 
 function App() {
     return (
-        <Router basename='/'>
-            <ul>
-                <li style={{color: 'black'}}><Link to="/home">Home</Link></li>
-                <li style={{color: 'black'}}><Link to="/profile-photo">Profile photo</Link></li>
-            </ul>
-
-            <hr />
+        <Router>
             <Route exact path='/profile-photo' component={ProfilePhotoPage} />
             <Route exact path='/home' component={HomePage} />
-            {/* <Route exact path='/login' component={} />
-            <Route exact path='/register' component={} /> */}
+            <Route exact path='/login' component={() => <LoginRegisterPage page='login' />} />
+            <Route exact path='/register' component={() => <LoginRegisterPage page='register' />} />
         </Router>
     )
 }
