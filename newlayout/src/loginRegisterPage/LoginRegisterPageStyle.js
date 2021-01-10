@@ -143,7 +143,9 @@ const LoginRegisterStyle = styled.main`
         width: 100%;
 
         font-size: 20px;
+
         color: #000000;
+
         opacity: 0.7;
 
         outline: 0;
@@ -151,8 +153,14 @@ const LoginRegisterStyle = styled.main`
         margin: 10px 0 0;
     }
 
+        select option {
+            opacity: 0.7;
+        }
+
     form input::placeholder {
         color: #000000;
+
+        font-family: 'Roboto Slab', sans-serif;
     }
 
     button, a {

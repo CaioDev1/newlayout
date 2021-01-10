@@ -54,7 +54,7 @@ function ProfilePhotoPage() {
                     </div>
     
                     <button id='profile-photo-page-skip-page-button'>
-                        <Link to='/home'><h3>Prosseguir para a home</h3></Link>
+                        <Link to='/'><h3>Prosseguir para a home</h3></Link>
                         <svg width="15" height="25" viewBox="0 0 15 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M2 23L11.7929 13.2071C12.1834 12.8166 12.1834 12.1834 11.7929 11.7929L2 2" stroke="#2D2D2D" stroke-width="5"/>
                         </svg>
