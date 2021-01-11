@@ -52,6 +52,8 @@ export default styled.div`
 
             #header-main-button-field {
                 justify-content: space-around;
+
+                position: relative;
             }
             
                 #header-main-button-field button {
@@ -191,6 +193,8 @@ export default styled.div`
 
                                 #friend-requests {
                                     padding: 10px 0;
+
+                                    width: 100%;
                                 }
 
                                 #notification {
@@ -353,5 +357,18 @@ export default styled.div`
     #header-left {
         justify-content: center;
     }
+
+        #header-main-button-field {
+            position: initial;
+        }
+
+        .button-expansion-block {
+            left: 15%;
+            right: 15%;
+
+            top: 130px;
+
+            width: 70%;
+        }
 }
 `

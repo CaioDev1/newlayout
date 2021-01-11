@@ -293,6 +293,8 @@ export default styled.div`
                         padding: 5% 5%;
 
                         font-size: 15px;
+
+                        word-break: break-all;
                     }
 
                         #post-content img {
