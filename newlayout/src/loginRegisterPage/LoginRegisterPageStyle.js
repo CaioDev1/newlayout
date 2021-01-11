@@ -1,6 +1,12 @@
 import styled, { css } from 'styled-components'
 
 const LoginRegisterStyle = styled.main`
+    main, article {
+        min-width: 300px;
+
+        min-height: 550px;
+    }
+
     * {
         font-family: 'Roboto Slab', sans-serif;
     }
@@ -10,21 +16,15 @@ const LoginRegisterStyle = styled.main`
 
         justify-content: center;
 
-        height: 100vh;
+        height: calc(100vh - 140px);
 
-        width: 100vw;
-
-        padding: 10%;
+        padding: 5%;
     }
 
     .bar {
-        min-width: 100vw;
-        width: 100%;
         height: 70px;
 
         background: #1F1E1E;
-
-        position: fixed;
 
         z-index: 1;
     }
@@ -56,6 +56,10 @@ const LoginRegisterStyle = styled.main`
         flex-direction: column;
 
         text-align: left;
+
+        /* padding-right: 10%; */
+
+        width: 80%;
     }
 
     section h1, section h5 {
@@ -63,7 +67,7 @@ const LoginRegisterStyle = styled.main`
     }
 
     section h1 {
-        font-size: 2.8rem;
+        font-size: 2.6rem;
 
         font-weight: 400;
     }
@@ -146,19 +150,15 @@ const LoginRegisterStyle = styled.main`
 
         color: #000000;
 
-        opacity: 0.7;
-
         outline: 0;
 
         margin: 10px 0 0;
     }
 
-        select option {
-            opacity: 0.7;
-        }
-
     form input::placeholder {
         color: #000000;
+
+        opacity: 0.7;
 
         font-family: 'Roboto Slab', sans-serif;
     }
@@ -263,6 +263,10 @@ const LoginRegisterStyle = styled.main`
             }
     ` :
     css`
+        .title {
+            text-align: center;
+        }
+        
         select option {
             color: #000000;
         }
@@ -270,7 +274,7 @@ const LoginRegisterStyle = styled.main`
         form h1 {
             font-size: 2rem;
 
-            margin: auto 0;
+            margin: 15px 0;
 
             font-weight: 500;
         }
@@ -300,7 +304,7 @@ const LoginRegisterStyle = styled.main`
 
             justify-content: space-between;
 
-            margin-top: 10%;
+            margin-top: 7%;
         }
 
             #createButton {
@@ -333,14 +337,42 @@ const LoginRegisterStyle = styled.main`
     }
 
 @media screen and (max-width: 800px) {
+    .bar {
+        height: 30px;
+    }
+
     article {
-        justify-content: center;
+        justify-content: space-around;
         flex-direction: column;
+
+        min-height: calc(100vh - 60px);
+        height: 100%;
     }
 
         article > section {
             min-width: 100%;
+
+            min-height: 100%;
         }
+
+            .title {
+                justify-content: center;
+                align-items: center;
+
+                text-align: center;
+            }
+
+            section h1 {
+                font-size: 2rem;
+                
+                line-height: 30px;
+                
+                text-align: center;
+            }
+
+            section.secRight form {
+                width: 100%;
+            }
 }
 `
 
