@@ -2,9 +2,9 @@ import styled from 'styled-components'
 
 const profilePageStyle = styled.main`
     main {
-        min-height: 100vh;
-        max-height: 100vh;
-
+        min-height: 700px;
+        height: 100vh;
+        
         min-width: 350px;
 
         padding: calc(12vh + 2%) 2% 2%;
@@ -19,10 +19,9 @@ const profilePageStyle = styled.main`
             flex-direction: column;
 
             width: 100%;
+            
 
             padding: 0 5%;
-
-           /*  position: relative; */
         }
 
         section.secLeft * {
@@ -84,8 +83,6 @@ const profilePageStyle = styled.main`
 
             background: #F2F2F2;
 
-            /* height: 100%; */
-
             padding: 5%;
         }
 
@@ -100,15 +97,21 @@ const profilePageStyle = styled.main`
 
                     margin: 5% 0;
 
-                    font-size: 1.3rem;
+                    font-size: 1.6rem;
                 }
 
                     #profile-user-about svg {
                         margin-right: 20px;
 
-                        height: 40px;
-                        width: 40px;
+                        min-height: 50px;
+                        min-width: 50px;
+
+                        display: flex;
                     }
+
+                        #profile-user-about svg path {
+                            
+                        }
 
                     #profile-user-about strong {
                         margin: 0 1%;
@@ -158,7 +161,7 @@ const profilePageStyle = styled.main`
 
                 position: relative;
 
-                padding: 5% 3%;
+                padding: 5% 1%;
             }
             
                 #content-title {
@@ -169,7 +172,7 @@ const profilePageStyle = styled.main`
                 }
 
                 #content-items {
-                    height: 95%;
+                    height: 90%;
 
                     overflow-y: scroll;
                 }
@@ -177,10 +180,79 @@ const profilePageStyle = styled.main`
                 #content-items::-webkit-scrollbar-thumb {
                     background: white;
                 }
+                    #profile-user-posts, #profile-user-friends {
+                        padding: 0 4%;
+                    }
 
                     #post {
                         width: 100%;
                     }
+
+                #profile-user-friends {
+                    display: grid;
+
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-template-rows: repeat(5, 1fr);
+
+                    height: 95%;
+
+                    gap: 5%;
+                }
+
+                    #friend-item {
+                        position: relative;
+
+                        width: 100%;
+
+                        min-height: 100px;
+                        max-height: 90%;
+
+                        overflow: hidden;
+
+                        border-radius: 15px;
+                    }
+
+                        #friend-item #user-icon {
+                            min-width: 200px;
+                            min-height: 200px;
+
+                            width: 100%;
+                            height: 100%;
+
+                            border-radius: 0;
+
+                            border-radius: 15px;
+
+                            position: absolute;
+
+                            top: -9999px;
+                            bottom: -9999px;
+                            left: -9999px;
+                            right: -9999px;
+                            margin: auto;
+                        }
+
+                        #friend-item span {
+                            position: absolute;
+
+                            bottom: 0px;
+
+                            height: 30%;
+                            width: 100%;
+
+                            text-align: center;
+
+                            background: #2D2D2D;
+                            opacity: 0.6;
+
+                            display: flex;
+
+                            align-items: center;
+                            justify-content: center;
+
+                            border-bottom-left-radius: 15px;
+                            border-bottom-right-radius: 15px;
+                        }
 
 @media screen and (max-width: 800px) {
     main {

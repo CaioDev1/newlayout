@@ -6,6 +6,7 @@ import HeaderBlock from '../components/HeaderBlock/HeaderBlock'
 import UserIcon from '../components/UserIcon/UserIcon'
 
 import Post from '../components/Post/Post'
+import { Link as div } from 'react-router-dom'
 
 function ProfilePage() {
     return (
@@ -47,13 +48,13 @@ function ProfilePage() {
                                 Atualmente em um relacionamento
                             </li>
                             <li>
-                                <svg width="40" height="40" viewBox="0 0 32 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg width="40" height="40" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M16.0001 0C24.4623 0 31.3216 6.85929 31.3216 15.3214C31.3216 21.7957 26.7723 28.8514 17.7916 36.564C17.2922 36.993 16.6555 37.2286 15.9972 37.228C15.3389 37.2274 14.7026 36.9907 14.204 36.5609L13.61 36.0454C5.02685 28.534 0.678711 21.6511 0.678711 15.3214C0.678711 6.85929 7.538 0 16.0001 0ZM16.0001 9.42857C14.4373 9.42857 12.9384 10.0494 11.8333 11.1545C10.7281 12.2597 10.1073 13.7585 10.1073 15.3214C10.1073 16.8843 10.7281 18.3832 11.8333 19.4883C12.9384 20.5934 14.4373 21.2143 16.0001 21.2143C17.563 21.2143 19.0619 20.5934 20.167 19.4883C21.2721 18.3832 21.893 16.8843 21.893 15.3214C21.893 13.7585 21.2721 12.2597 20.167 11.1545C19.0619 10.0494 17.563 9.42857 16.0001 9.42857Z" fill="#2E2E2E"/>
                                 </svg>
                                 Mora em <strong>São Paulo</strong>
                             </li>
                             <li>
-                                <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg width="40" height="40" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M18 36C8.05982 36 0 27.9402 0 18C0 8.05982 8.05982 0 18 0C27.9402 0 36 8.05982 36 18C36 27.9402 27.9402 36 18 36ZM19.2857 9.32143C19.2857 9.14464 19.1411 9 18.9643 9H17.0357C16.8589 9 16.7143 9.14464 16.7143 9.32143V20.25C16.7143 20.4268 16.8589 20.5714 17.0357 20.5714H18.9643C19.1411 20.5714 19.2857 20.4268 19.2857 20.25V9.32143ZM18 23.1429C17.4953 23.1532 17.0148 23.3609 16.6615 23.7214C16.3083 24.082 16.1104 24.5667 16.1104 25.0714C16.1104 25.5762 16.3083 26.0609 16.6615 26.4214C17.0148 26.782 17.4953 26.9897 18 27C18.5047 26.9897 18.9852 26.782 19.3385 26.4214C19.6917 26.0609 19.8896 25.5762 19.8896 25.0714C19.8896 24.5667 19.6917 24.082 19.3385 23.7214C18.9852 23.3609 18.5047 23.1532 18 23.1429Z" fill="#2E2E2E"/>
                                 </svg>
                                 Corno(a) por <strong>4 vezes</strong>
@@ -79,10 +80,23 @@ function ProfilePage() {
                         </div>
                         <h1 id='content-title'>Publicações (25)</h1>
                         <div id='content-items'>
-                            <Post />
-                            <Post hasImage />
-                            <Post />
-                            <Post />
+                            <div id='profile-user-posts'>
+                                {/* <Post />
+                                <Post hasImage />
+                                <Post />
+                                <Post /> */}
+                            </div>
+                            <div id='profile-user-friends'>
+                                {
+                                    [...Array(20)].map((v, i) => {
+                                        return (
+                                            <div id='friend-item'>
+                                                <UserIcon />
+                                                <span>Paulin do gás</span>
+                                            </div>
+                                        )
+                                    })                                }
+                            </div>
                         </div>
                     </div>
                 </section>

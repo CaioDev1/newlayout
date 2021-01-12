@@ -8,12 +8,14 @@ const Style = styled.div`
         width: 40px;
 
         border-radius: 100%;
+
+        overflow: hidden;
     }
 `
 
 function UserIcon() {
     return (
-        <Style><img id='user-icon' src={process.env.PUBLIC_URL + '/UserPhoto_Profile.jpg'} /></Style>
+        <Style><img id='user-icon' src={process.env.PUBLIC_URL + '/Friends_BT.png'} /></Style>
     )
 }
 
