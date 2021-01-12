@@ -1,6 +1,6 @@
 import React from 'react'
 
-import UserIcon from '../UserIcon'
+import UserIcon from '../../../UserIcon/UserIcon'
 
 function Friends() {
     return (

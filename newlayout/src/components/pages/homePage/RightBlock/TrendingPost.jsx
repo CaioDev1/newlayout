@@ -1,12 +1,11 @@
 import React from 'react'
 
-import UserIcon from '../UserIcon'
+import UserIcon from '../../../UserIcon/UserIcon'
 
 function TrendingPost({top}) {
     return (
     <div id={`trending-field-post${top ? '-1' : ''}`}>
         <div id={`trending-field-post${top ? '-1' : ''}-data`}>
-            {/* <div id={`trending-field-post${top ? '-1' : ''}-user-icon`}></div> */}
             <UserIcon />
 
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium dignissimos dicta aperiam, esse?</p>

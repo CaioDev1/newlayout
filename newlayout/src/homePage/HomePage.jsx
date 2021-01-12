@@ -3,9 +3,9 @@ import React, {useState} from 'react'
 import Style from './homePageStyle.js'
 
 import TrendingPost from '../components/pages/homePage/RightBlock/TrendingPost'
-import UserIcon from '../components/pages/homePage/UserIcon'
+import UserIcon from '../components/UserIcon/UserIcon'
 import Friend from '../components/pages/homePage/LeftBlock/Friends'
-import Post from '../components/pages/homePage/MiddleBlock/Post/Post'
+import Post from '../components/Post/Post'
 
 import HeaderBlock from '../components/HeaderBlock/HeaderBlock'
 
