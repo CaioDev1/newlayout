@@ -5,6 +5,8 @@ const profilePageStyle = styled.main`
         min-height: 100vh;
         max-height: 100vh;
 
+        min-width: 350px;
+
         padding: calc(12vh + 2%) 2% 2%;
 
         display: flex;
@@ -156,13 +158,14 @@ const profilePageStyle = styled.main`
 
                 position: relative;
 
-                padding: 5% 10%;
+                padding: 5% 3%;
             }
             
                 #content-title {
                     font-size: 2rem;
 
                     padding-bottom: 10px;
+                    padding-left: 10px;
                 }
 
                 #content-items {
@@ -178,6 +181,64 @@ const profilePageStyle = styled.main`
                     #post {
                         width: 100%;
                     }
+
+@media screen and (max-width: 800px) {
+    main {
+        flex-direction: column;
+
+        max-height: 100%;
+
+        padding-top: 18vh;
+    }
+
+        section.secLeft, section.secRight {
+            padding: 5% 0;
+        }
+
+        section.secLeft {
+            margin-bottom: 30px;
+        }
+        
+        section.secRight {
+            margin-top: 30px;
+        }
+
+            #profile-user-header {
+                flex-direction: column;
+            }
+                #profile-user-header-info > div {
+                    justify-content: center;
+                }
+
+                    #profile-user-header-info > div * {
+                        margin: 0 5px;
+                    }
+
+            #profile-user-about-title {
+                justify-content: center;
+            }
+
+            #profile-user-about li {
+                font-size: 1.5rem;
+            }
+
+            #content {
+                border-radius: 15px
+            }
+
+                #change-content-bar {
+                    display: flex;
+
+                    top: -60px;
+                    
+                    left: calc(50% - 60px);
+                }
+
+                    .change-content-bar-button.bottom {
+                        border-radius: 0;
+                        border-top-right-radius: 15px;
+                    }
+}
 `
 
 export default profilePageStyle

@@ -15,6 +15,7 @@ export default styled.div`
         left: 0;
 
         width: 100%;
+        min-width: 350px;
         min-height: 50px;
         height: 12%;
 

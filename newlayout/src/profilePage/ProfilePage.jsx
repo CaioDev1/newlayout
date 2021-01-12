@@ -80,7 +80,7 @@ function ProfilePage() {
                         <h1 id='content-title'>Publicações (25)</h1>
                         <div id='content-items'>
                             <Post />
-                            <Post />
+                            <Post hasImage />
                             <Post />
                             <Post />
                         </div>
