@@ -4,7 +4,7 @@ const LoginRegisterStyle = styled.main`
     main, article {
         min-width: 300px;
 
-        min-height: 550px;
+        min-height: 500px;
     }
 
     * {

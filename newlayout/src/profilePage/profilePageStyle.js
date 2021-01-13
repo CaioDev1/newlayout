@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const profilePageStyle = styled.main`
     main {
-        min-height: 700px;
+        min-height: 600px;
         height: 100vh;
         
         min-width: 350px;
@@ -43,6 +43,8 @@ const profilePageStyle = styled.main`
                     width: 120px;
 
                     margin-right: 30px;
+
+                    border: 5px solid #1E1E1E;
                 }
 
                 #profile-user-header-info {
@@ -108,10 +110,6 @@ const profilePageStyle = styled.main`
 
                         display: flex;
                     }
-
-                        #profile-user-about svg path {
-                            
-                        }
 
                     #profile-user-about strong {
                         margin: 0 1%;
@@ -199,68 +197,20 @@ const profilePageStyle = styled.main`
                     gap: 5%;
                 }
 
-                    #friend-item {
-                        position: relative;
-
-                        width: 100%;
-
-                        min-height: 100px;
-                        max-height: 90%;
-
-                        overflow: hidden;
-
-                        border-radius: 15px;
-                    }
-
-                        #friend-item #user-icon {
-                            min-width: 200px;
-                            min-height: 200px;
-
-                            width: 100%;
-                            height: 100%;
-
-                            border-radius: 0;
-
-                            border-radius: 15px;
-
-                            position: absolute;
-
-                            top: -9999px;
-                            bottom: -9999px;
-                            left: -9999px;
-                            right: -9999px;
-                            margin: auto;
-                        }
-
-                        #friend-item span {
-                            position: absolute;
-
-                            bottom: 0px;
-
-                            height: 30%;
-                            width: 100%;
-
-                            text-align: center;
-
-                            background: #2D2D2D;
-                            opacity: 0.6;
-
-                            display: flex;
-
-                            align-items: center;
-                            justify-content: center;
-
-                            border-bottom-left-radius: 15px;
-                            border-bottom-right-radius: 15px;
-                        }
+@media screen and (max-width: 1000px) {
+    #profile-user-friends {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}
 
 @media screen and (max-width: 800px) {
     main {
         flex-direction: column;
 
-        max-height: 100%;
+        height: 100%;
 
-        padding-top: 18vh;
+        padding: 18vh 5% 5%;
     }
 
         section.secLeft, section.secRight {
@@ -278,13 +228,38 @@ const profilePageStyle = styled.main`
             #profile-user-header {
                 flex-direction: column;
             }
-                #profile-user-header-info > div {
-                    justify-content: center;
+
+                #profile-user-header #user-icon {
+                    margin: 0;
+
+                    height: 170px;
+                    width: 170px;
                 }
 
-                    #profile-user-header-info > div * {
-                        margin: 0 5px;
+                #profile-user-header-info > div {
+                    justify-content: center;
+
+                    text-align: center;
+                }
+
+                    #profile-user-header-info > div h1 {
+                        margin: 0 5%;
                     }
+
+                    #profile-user-header-info-name {
+                        font-size: 2rem;
+
+                        position: relative;
+                    }
+
+                        #profile-user-header-info-name #edit-profile-button {
+                            position: absolute;
+
+                            height: 40%;
+
+                            right: 0;
+                            bottom: 20%;
+                        }
 
             #profile-user-about-title {
                 justify-content: center;
@@ -309,6 +284,14 @@ const profilePageStyle = styled.main`
                     .change-content-bar-button.bottom {
                         border-radius: 0;
                         border-top-right-radius: 15px;
+                    }
+
+                #content-items {
+                    overflow: initial;
+                }
+
+                    #profile-user-friends {
+                        gap: 25px;
                     }
 }
 `

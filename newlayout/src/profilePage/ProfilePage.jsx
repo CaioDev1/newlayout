@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 import Style from './profilePageStyle'
 
@@ -6,9 +6,26 @@ import HeaderBlock from '../components/HeaderBlock/HeaderBlock'
 import UserIcon from '../components/UserIcon/UserIcon'
 
 import Post from '../components/Post/Post'
-import { Link as div } from 'react-router-dom'
+import Friend from '../components/pages/profilePage/Friend/Friend'
 
 function ProfilePage() {
+    const [whichContentBar, setWhichContentBar] = useState('posts')
+
+    function handleChangeContent(e) {
+        const button = e.target.closest('.change-content-bar-button')
+
+        if(!button.classList.contains('selected')) {
+            button.classList.add('selected')
+
+            const isTopButton = button.classList.contains('top')
+
+            button.parentElement.querySelector(`.change-content-bar-button${isTopButton ? '.bottom' : '.top'}`)
+                .classList.remove('selected')
+
+            setWhichContentBar(isTopButton ? 'posts' : 'friends')
+        }
+    }
+
     return (
         <Style>
             <HeaderBlock />
@@ -65,14 +82,14 @@ function ProfilePage() {
                 <section className='secRight'>
                     <div id='content'>
                         <div id='change-content-bar'>
-                            <button className='change-content-bar-button top'>
+                            <button className='change-content-bar-button top selected' onClick={handleChangeContent}>
                                 <svg width="34" height="40" viewBox="0 0 34 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M6 0.75H28C29.4587 0.75 30.8576 1.32946 31.8891 2.36091C32.9205 3.39236 33.5 4.79131 33.5 6.25V33.75C33.5 35.2087 32.9205 36.6076 31.8891 37.6391C30.8576 38.6705 29.4587 39.25 28 39.25H6C4.54131 39.25 3.14236 38.6705 2.11091 37.6391C1.07946 36.6076 0.5 35.2087 0.5 33.75V6.25C0.5 4.79131 1.07946 3.39236 2.11091 2.36091C3.14236 1.32946 4.54131 0.75 6 0.75ZM6 3.5C5.27065 3.5 4.57118 3.78973 4.05546 4.30546C3.53973 4.82118 3.25 5.52065 3.25 6.25V33.75C3.25 34.4793 3.53973 35.1788 4.05546 35.6945C4.57118 36.2103 5.27065 36.5 6 36.5H28C28.7293 36.5 29.4288 36.2103 29.9445 35.6945C30.4603 35.1788 30.75 34.4793 30.75 33.75V6.25C30.75 5.52065 30.4603 4.82118 29.9445 4.30546C29.4288 3.78973 28.7293 3.5 28 3.5H6Z" fill="#1E1E1E"/>
                                     <path d="M6 13.125C6 12.7603 6.14487 12.4106 6.40273 12.1527C6.66059 11.8949 7.01033 11.75 7.375 11.75H26.625C26.9897 11.75 27.3394 11.8949 27.5973 12.1527C27.8551 12.4106 28 12.7603 28 13.125V32.375C28 32.7397 27.8551 33.0894 27.5973 33.3473C27.3394 33.6051 26.9897 33.75 26.625 33.75H7.375C7.01033 33.75 6.66059 33.6051 6.40273 33.3473C6.14487 33.0894 6 32.7397 6 32.375V13.125Z" fill="#1E1E1E"/>
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M6 7.625C6 7.26033 6.14487 6.91059 6.40273 6.65273C6.66059 6.39487 7.01033 6.25 7.375 6.25H21.125C21.4897 6.25 21.8394 6.39487 22.0973 6.65273C22.3551 6.91059 22.5 7.26033 22.5 7.625C22.5 7.98967 22.3551 8.33941 22.0973 8.59727C21.8394 8.85513 21.4897 9 21.125 9H7.375C7.01033 9 6.66059 8.85513 6.40273 8.59727C6.14487 8.33941 6 7.98967 6 7.625Z" fill="#1E1E1E"/>
                                 </svg>
                             </button>
-                            <button className='change-content-bar-button bottom selected'>
+                            <button className='change-content-bar-button bottom' onClick={handleChangeContent}>
                                 <svg width="41" height="28" viewBox="0 0 41 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12.3 14C16.2655 14 19.475 10.8687 19.475 7C19.475 3.13125 16.2655 0 12.3 0C8.33453 0 5.125 3.13125 5.125 7C5.125 10.8687 8.33453 14 12.3 14ZM17.22 16H16.6883C15.3558 16.625 13.8759 17 12.3 17C10.7241 17 9.25062 16.625 7.91172 16H7.38C3.30562 16 0 19.225 0 23.2V25C0 26.6562 1.37734 28 3.075 28H21.525C23.2227 28 24.6 26.6562 24.6 25V23.2C24.6 19.225 21.2944 16 17.22 16ZM30.75 14C34.1453 14 36.9 11.3125 36.9 8C36.9 4.6875 34.1453 2 30.75 2C27.3547 2 24.6 4.6875 24.6 8C24.6 11.3125 27.3547 14 30.75 14ZM33.825 16H33.5816C32.6911 16.3 31.7494 16.5 30.75 16.5C29.7506 16.5 28.8089 16.3 27.9184 16H27.675C26.3681 16 25.1637 16.3687 24.1067 16.9625C25.6698 18.6062 26.65 20.7875 26.65 23.2V25.6C26.65 25.7375 26.618 25.8687 26.6116 26H37.925C39.6227 26 41 24.6562 41 23C41 19.1313 37.7905 16 33.825 16Z" fill="#1E1E1E"/>
                                 </svg>
@@ -80,23 +97,25 @@ function ProfilePage() {
                         </div>
                         <h1 id='content-title'>Publicações (25)</h1>
                         <div id='content-items'>
-                            <div id='profile-user-posts'>
-                                {/* <Post />
-                                <Post hasImage />
-                                <Post />
-                                <Post /> */}
-                            </div>
-                            <div id='profile-user-friends'>
-                                {
-                                    [...Array(20)].map((v, i) => {
-                                        return (
-                                            <div id='friend-item'>
-                                                <UserIcon />
-                                                <span>Paulin do gás</span>
-                                            </div>
-                                        )
-                                    })                                }
-                            </div>
+                            {
+                                whichContentBar == 'posts' ? (
+                                    <div id='profile-user-posts'>
+                                        <Post />
+                                        <Post hasImage />
+                                        <Post />
+                                        <Post />
+                                    </div>
+                                ) :
+                                <div id='profile-user-friends'>
+                                    {
+                                        [...Array(12)].map(() => {
+                                            return (
+                                                <Friend />
+                                            )
+                                        })
+                                    }
+                                </div>
+                            }
                         </div>
                     </div>
                 </section>
