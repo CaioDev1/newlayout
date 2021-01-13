@@ -57,13 +57,13 @@ export default styled.div`
                 position: relative;
             }
             
-                #header-main-button-field button {
+                #header-main-button-field a {
                     display: flex;
 
                     align-items: center;
                     justify-content: center;
 
-                    padding: 10px;
+                    padding: 3%;
 
                     height: 50%;
                     width: 25%;
@@ -71,12 +71,16 @@ export default styled.div`
                     position: relative;
                 }
 
-                #header-main-button-field button.selected {
+                #header-main-button-field a.selected {
                     border-bottom: 3px solid #03A800;
                 }
 
-                    #header-main-button-field button svg {
-                        height: 25px;
+                    #header-main-button-field a svg {
+                        min-height: 20px;
+                        min-width: 20px;
+
+                        height: 100%;
+                        width: 100%;
                     }
                         #notification-value-pop-up {
                             position: absolute;
@@ -95,8 +99,8 @@ export default styled.div`
 
                             border-radius: 100%;
 
-                            height: 20px;
-                            width: 20px;
+                            height: 25px;
+                            width: 25px;
 
                             padding: 12px;
                         }
@@ -112,7 +116,8 @@ export default styled.div`
 
                 border-radius: 100px;
 
-                height: 40px;
+                min-height: 30px;
+                height: 40%;
 
                 padding: 5px 15px;
             }
@@ -121,6 +126,14 @@ export default styled.div`
                     height: 100%;
 
                     margin-right: 15px;
+                }
+
+                #header-main-input-field-body input::placeholder {
+                    font-size: 0.8rem;
+
+                    color: #F2F2F2;
+
+                    opacity: 0.7;
                 }
 
                 .button-expansion-block {
@@ -364,12 +377,12 @@ export default styled.div`
         }
 
         .button-expansion-block {
-            left: 15%;
-            right: 15%;
+            left: 10%;
+            right: 10%;
 
             top: 130px;
 
-            width: 70%;
+            width: 80%;
         }
 }
 `

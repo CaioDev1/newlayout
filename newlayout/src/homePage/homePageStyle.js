@@ -12,6 +12,7 @@ export default styled.div`
         gap: 40px;
         
         min-height: 100vh;
+        min-width: 350px;
 
         padding: 20vh 2% 20px;
 
@@ -384,10 +385,6 @@ export default styled.div`
         #user-field {
             min-width: calc(31%);
         }
-
-        #post {
-            width: 100%;
-        }
     }
 
     @media screen and (max-width: 800px) {
@@ -405,19 +402,6 @@ export default styled.div`
         #right-block, #left-block {
             display: none;
         }
-
-        #post {
-            width: 100%;
-        }
-
-            #post-body {
-                width: 100%;
-            }
-
-                #public-comments-field {
-                    padding-left: 0;
-                    padding-right: 0;
-                }
     }
 
 

@@ -33,12 +33,12 @@ function HeaderBlock() {
                     </div>
                 </div>
                 <div id='header-main-button-field'>
-                    <button className='selected'>
+                    <Link to='/' className='selected'>
                         <svg width="38" height="40" viewBox="0 0 38 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M21.7197 1.02488C20.9724 0.365026 20.0033 0 18.9986 0C17.994 0 17.0249 0.365026 16.2776 1.02488L1.349 14.2051C0.924207 14.5805 0.584563 15.0396 0.352148 15.5525C0.119733 16.0654 -0.000249618 16.6206 3.89904e-07 17.182V35.9987C3.89904e-07 37.0599 0.428953 38.0777 1.19249 38.8281C1.95604 39.5784 2.99162 40 4.07143 40H9.5C10.5798 40 11.6154 39.5784 12.3789 38.8281C13.1425 38.0777 13.5714 37.0599 13.5714 35.9987V25.3286C13.5714 24.9749 13.7144 24.6357 13.9689 24.3855C14.2234 24.1354 14.5686 23.9949 14.9286 23.9949H23.0714C23.4314 23.9949 23.7766 24.1354 24.0311 24.3855C24.2856 24.6357 24.4286 24.9749 24.4286 25.3286V35.9987C24.4286 37.0599 24.8575 38.0777 25.6211 38.8281C26.3846 39.5784 27.4202 40 28.5 40H33.9286C35.0084 40 36.044 39.5784 36.8075 38.8281C37.571 38.0777 38 37.0599 38 35.9987V17.182C38.0002 16.6206 37.8803 16.0654 37.6479 15.5525C37.4154 15.0396 37.0758 14.5805 36.651 14.2051L21.7224 1.02488H21.7197Z" fill="#131313"/>
                         </svg>
-                    </button>
-                    <button onClick={() => {setIsHeaderMessagesClicked(preValue => {
+                    </Link>
+                    <Link onClick={() => {setIsHeaderMessagesClicked(preValue => {
                         setIsHeaderNotificationsClicked(false)
     
                         return !preValue
@@ -49,8 +49,8 @@ function HeaderBlock() {
                         <div id='notification-value-pop-up'>
                             3
                         </div>
-                    </button>
-                    <button onClick={() => {setIsHeaderNotificationsClicked(preValue => {
+                    </Link>
+                    <Link onClick={() => {setIsHeaderNotificationsClicked(preValue => {
                         setIsHeaderMessagesClicked(false)
     
                         return !preValue
@@ -61,7 +61,7 @@ function HeaderBlock() {
                         <div id='notification-value-pop-up'>
                             3
                         </div>
-                    </button>
+                    </Link>
                     {
                         isHeaderMessagesClicked && (
                             <ButtonExpansionBlock side='header-main-side'>

@@ -55,29 +55,38 @@ const profilePageStyle = styled.main`
                         justify-content: space-between;
                     }
 
-                    #profile-user-header-info-name, #profile-user-about-title {
+                    #profile-user-header-info-name {
+                        font-size: 2.3rem;
+
+                        min-width: 200px;
+                    }
+
+                    #profile-user-header-info-historic span {
+                        margin: 0 10px;
+                    }
+                    
+                    #profile-user-about-title {
+                        display: flex;
+
+                        margin: 2% 0;
+
                         font-size: 1.6rem;
                     }
+
+                    #profile-user-about-title h2 {
+                        margin: 0 20px;
+                    }
+
+                    #edit-profile-button {
+                        position: relative;
+
+                        bottom: -5px;
+                    }
+
 
         section.secRight {
             padding-right: 0;
         }
-        
-        #profile-user-about-title {
-            display: flex;
-
-            margin: 5% 0;
-        }
-
-            #profile-user-about-title h2 {
-                margin: 0 20px;
-            }
-
-            #edit-profile-button {
-                position: relative;
-
-                bottom: -5px;
-            }
 
         #profile-user-about {
             box-shadow: 4px 4px 35px rgba(0, 0, 0, 0.15);
@@ -198,10 +207,17 @@ const profilePageStyle = styled.main`
                 }
 
 @media screen and (max-width: 1000px) {
+    #profile-user-header-info-name {
+        font-size: 2rem;
+    }
+
+    #profile-user-about li {
+        font-size: 1.3rem;
+    }
+
     #profile-user-friends {
         grid-template-columns: 1fr 1fr;
     }
-    
 }
 
 @media screen and (max-width: 800px) {

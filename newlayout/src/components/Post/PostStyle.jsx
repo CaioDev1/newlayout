@@ -247,6 +247,38 @@ const PostStyle = styled.div`
             #post-image-screen img {
                 height: 50vh;
             }
+
+@media screen and (min-width: 800px) and (max-width: 1100px) {
+    #post {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #post {
+        width: 100%;
+    }
+
+        #post-body {
+            width: 100%;
+        }
+
+            #public-comments-field {
+                padding-left: 0;
+                padding-right: 0;
+            }
+}
+
+@media screen and (max-width: 500px) {
+    #post-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+        #post-header span {
+            margin-left: 55px;
+        }
+}
 `
 
 export default PostStyle

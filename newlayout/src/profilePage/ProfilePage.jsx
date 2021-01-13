@@ -95,7 +95,11 @@ function ProfilePage() {
                                 </svg>
                             </button>
                         </div>
-                        <h1 id='content-title'>Publicações (25)</h1>
+                        <h1 id='content-title'>
+                            {
+                                whichContentBar == 'posts' ? 'Publicações (25)' : 'Amigos(12)'
+                            }
+                        </h1>
                         <div id='content-items'>
                             {
                                 whichContentBar == 'posts' ? (

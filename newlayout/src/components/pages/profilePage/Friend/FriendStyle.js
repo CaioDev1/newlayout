@@ -38,13 +38,16 @@ const FriendStyle = styled.div`
 
             bottom: 0px;
 
-            height: 30%;
+            min-height: 30%;
             width: 100%;
+
+            line-height: 15px;
+
+            padding: 5px;
 
             text-align: center;
 
-            background: #2D2D2D;
-            opacity: 0.6;
+            background: #2c2c2ca4;
 
             display: flex;
 
