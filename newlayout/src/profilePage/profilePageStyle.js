@@ -139,7 +139,51 @@ const profilePageStyle = styled.main`
                     border-radius: 0px;
 
                     padding: 10px 0;
+
+                    transition: all .3s ease-out;
+
+                    position: relative;
+                    left: 0;
                 }
+                    .change-content-bar-button svg {
+                        min-width: 35px;
+                    }
+
+                    .change-content-bar-button:hover {
+                        justify-content: flex-start;
+
+                        padding: 15px;
+
+                        border-top-left-radius: 15px;
+                        border-bottom-left-radius: 15px;
+
+                        width: 200px;
+                        
+                        left: -140px;
+                    }
+
+                    .change-content-bar-button span {
+                        opacity: 0;
+                        width: 0;
+                        
+
+                        font-size: 1rem;
+
+                        color: black;
+
+                        font-weight: 500;
+
+                        transition: all .3s ease-out ;
+                    }
+
+                        .change-content-bar-button:hover span {
+                            opacity: 1;
+                            width: initial;
+                        }
+
+                    .change-content-bar-button:hover svg {
+                        margin-right: 10px;
+                    }
 
                 .change-content-bar-button.selected {
                     background: #1F1E1E;
@@ -147,6 +191,8 @@ const profilePageStyle = styled.main`
 
                 .change-content-bar-button.selected * {
                     fill: #F2F2F2;
+
+                    color: #F2F2F2;
                 }
 
                     .change-content-bar-button.top {
@@ -294,13 +340,34 @@ const profilePageStyle = styled.main`
 
                     top: -60px;
                     
-                    left: calc(50% - 60px);
+                    left: 0;
+                    right: 0;
+
+                    margin: 0 auto;
+
+                    justify-content: center;
                 }
 
-                    .change-content-bar-button.bottom {
-                        border-radius: 0;
-                        border-top-right-radius: 15px;
+                    .change-content-bar-button:hover {
+                        border-bottom-left-radius: 0;
+                        border-bottom-right-radius: 0;
+
+                        left: initial;
+                        right: initial;
                     }
+
+                        .change-content-bar-button.bottom {
+                            border-radius: 0;
+                            border-top-right-radius: 15px;
+
+                            display: flex;
+                            flex-direction: row-reverse;
+                        }
+
+                            .change-content-bar-button.bottom:hover svg {
+                                margin: 0;
+                                margin-left: 10px;
+                            }
 
                 #content-items {
                     overflow: initial;

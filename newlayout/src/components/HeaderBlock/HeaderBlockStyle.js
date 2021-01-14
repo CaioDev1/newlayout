@@ -16,7 +16,7 @@ export default styled.div`
 
         width: 100%;
         min-width: 350px;
-        min-height: 50px;
+        min-height: 85px;
         height: 12%;
 
         padding: 0 2%;
@@ -203,6 +203,8 @@ export default styled.div`
 
                                     #friend-requests-field-header a {
                                         color: #5A86C8;
+
+                                        white-space: nowrap;
                                     }
 
                                 #friend-requests {
