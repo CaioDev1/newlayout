@@ -81,7 +81,14 @@ export default styled.div`
 
                         height: 100%;
                         width: 100%;
+
+                        transition: transform .2s ease-out;
                     }
+
+                    #header-main-button-field a svg.rotated {
+                        transform: rotate(25deg);
+                    }
+
                         #notification-value-pop-up {
                             position: absolute;
 
@@ -103,7 +110,17 @@ export default styled.div`
                             width: 25px;
 
                             padding: 12px;
+
+                            transition: opacity .2s ease-out;
                         }
+
+                            #notification-value-pop-up.open {
+                                opacity: 1
+                            }
+
+                            #notification-value-pop-up.closed {
+                                opacity: 0;
+                            }
 
             #header-main-input-field-body, #header-main-input-field-body input {
                 width: 100%;

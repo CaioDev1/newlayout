@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 
 import Style from './HeaderBlockStyle'
 
@@ -12,6 +12,31 @@ function HeaderBlock() {
     const [isHeaderOptionsClicked, setIsHeaderOptionsClicked] = useState(false)
     const [isHeaderNotificationsClicked, setIsHeaderNotificationsClicked] = useState(false)
     const [isHeaderMessagesClicked, setIsHeaderMessagesClicked] = useState(false)
+
+    const isMounted = useRef(false)
+
+    function toggleNotificationPopUpIcon(e, show, isNotificationButton=false) {
+        const element = e.target.closest('a')
+        
+        const icon = element.querySelector('#notification-value-pop-up')
+
+        if(!show) {
+            icon.classList.remove('open')
+            icon.classList.add('closed')
+        } else {
+            icon.classList.remove('closed')
+            icon.classList.add('open')
+        }
+   
+    }
+
+    useEffect(() => {
+        if(isMounted.current) {
+            document.querySelector('#notification-button svg').classList.toggle('rotated')
+        } else {
+            isMounted.current = true
+        }
+    }, [isHeaderNotificationsClicked])
 
     return (
     <Style>
@@ -38,9 +63,11 @@ function HeaderBlock() {
                             <path d="M21.7197 1.02488C20.9724 0.365026 20.0033 0 18.9986 0C17.994 0 17.0249 0.365026 16.2776 1.02488L1.349 14.2051C0.924207 14.5805 0.584563 15.0396 0.352148 15.5525C0.119733 16.0654 -0.000249618 16.6206 3.89904e-07 17.182V35.9987C3.89904e-07 37.0599 0.428953 38.0777 1.19249 38.8281C1.95604 39.5784 2.99162 40 4.07143 40H9.5C10.5798 40 11.6154 39.5784 12.3789 38.8281C13.1425 38.0777 13.5714 37.0599 13.5714 35.9987V25.3286C13.5714 24.9749 13.7144 24.6357 13.9689 24.3855C14.2234 24.1354 14.5686 23.9949 14.9286 23.9949H23.0714C23.4314 23.9949 23.7766 24.1354 24.0311 24.3855C24.2856 24.6357 24.4286 24.9749 24.4286 25.3286V35.9987C24.4286 37.0599 24.8575 38.0777 25.6211 38.8281C26.3846 39.5784 27.4202 40 28.5 40H33.9286C35.0084 40 36.044 39.5784 36.8075 38.8281C37.571 38.0777 38 37.0599 38 35.9987V17.182C38.0002 16.6206 37.8803 16.0654 37.6479 15.5525C37.4154 15.0396 37.0758 14.5805 36.651 14.2051L21.7224 1.02488H21.7197Z" fill="#131313"/>
                         </svg>
                     </Link>
-                    <Link onClick={() => {setIsHeaderMessagesClicked(preValue => {
+                    <Link onClick={e => {setIsHeaderMessagesClicked(preValue => {
                         setIsHeaderNotificationsClicked(false)
-    
+
+                        toggleNotificationPopUpIcon(e, false)
+
                         return !preValue
                     })}}>
                         <svg width="47" height="39" viewBox="0 0 47 39" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -50,10 +77,12 @@ function HeaderBlock() {
                             3
                         </div>
                     </Link>
-                    <Link onClick={() => {setIsHeaderNotificationsClicked(preValue => {
-                        setIsHeaderMessagesClicked(false)
-    
-                        return !preValue
+                    <Link id='notification-button' onClick={e => {setIsHeaderNotificationsClicked(preValue => {
+                            setIsHeaderMessagesClicked(false)
+
+                            toggleNotificationPopUpIcon(e, false)
+                        
+                            return !preValue
                     })}}>
                         <svg width="38" height="42" viewBox="0 0 38 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M19.0005 42C20.3079 42.0016 21.5833 41.598 22.6495 40.8453C23.7157 40.0926 24.5196 39.0282 24.9496 37.8H13.0514C13.4813 39.0282 14.2853 40.0926 15.3515 40.8453C16.4176 41.598 17.6931 42.0016 19.0005 42ZM33.7783 26.4306V16.8C33.7783 10.0443 29.1655 4.3533 22.9166 2.6418C22.298 1.092 20.7865 0 19.0005 0C17.2145 0 15.7029 1.092 15.0844 2.6418C8.83549 4.3554 4.22271 10.0443 4.22271 16.8V26.4306L0.619046 30.0153C0.422623 30.21 0.266849 30.4414 0.160691 30.6962C0.054533 30.951 8.83333e-05 31.2242 0.000490493 31.5L0.000490493 33.6C0.000490493 34.157 0.22291 34.6911 0.61882 35.0849C1.01473 35.4787 1.5517 35.7 2.1116 35.7H35.8894C36.4493 35.7 36.9863 35.4787 37.3822 35.0849C37.7781 34.6911 38.0005 34.157 38.0005 33.6V31.5C38.0009 31.2242 37.9464 30.951 37.8403 30.6962C37.7341 30.4414 37.5784 30.21 37.3819 30.0153L33.7783 26.4306Z" fill="#131313"/>

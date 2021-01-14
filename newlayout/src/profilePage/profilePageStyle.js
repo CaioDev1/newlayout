@@ -272,7 +272,7 @@ const profilePageStyle = styled.main`
 
         height: 100%;
 
-        padding: 18vh 5% 5%;
+        padding: 20vh 5% 5%;
     }
 
         section.secLeft, section.secRight {
@@ -294,8 +294,8 @@ const profilePageStyle = styled.main`
                 #profile-user-header #user-icon {
                     margin: 0;
 
-                    height: 170px;
-                    width: 170px;
+                    height: 140px;
+                    width: 140px;
                 }
 
                 #profile-user-header-info > div {
@@ -309,7 +309,7 @@ const profilePageStyle = styled.main`
                     }
 
                     #profile-user-header-info-name {
-                        font-size: 2rem;
+                        font-size: 1.7rem;
 
                         position: relative;
                     }

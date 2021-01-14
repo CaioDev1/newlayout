@@ -1,10 +1,14 @@
 import React from 'react'
 
+import {Fade} from '@material-ui/core'
+
 function ButtonExpansionBlock({children, side}) {
     return (
-        <div className={`button-expansion-block ${side}`}>
-            {children}
-        </div>
+        <Fade in timeout={500} mountOnEnter unmountOnExit>
+            <div className={`button-expansion-block ${side}`}>
+                {children}
+            </div>
+        </Fade>
     )
 }
 
