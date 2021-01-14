@@ -111,7 +111,7 @@ export default styled.div`
 
                             padding: 12px;
 
-                            transition: opacity .2s ease-out;
+                            transition: all .2s ease-out;
                         }
 
                             #notification-value-pop-up.open {
@@ -121,6 +121,21 @@ export default styled.div`
                             #notification-value-pop-up.closed {
                                 opacity: 0;
                             }
+
+                                #notification-value-pop-up b {
+                                    position: relative;
+                                    right: 0;
+
+                                    transition: right .2s ease-in;
+                                }
+
+                                    #notification-value-pop-up.open b {
+                                        right: 0px;
+                                    }
+
+                                    #notification-value-pop-up.closed b {
+                                        right: -10px;
+                                    }
 
             #header-main-input-field-body, #header-main-input-field-body input {
                 width: 100%;
@@ -245,10 +260,14 @@ export default styled.div`
 
                                         width: 100%;
 
-                                        align-items: center;
+                                        /* align-items: center; */
 
                                         text-align: left;
                                     }
+
+                                        #notification-header strong {
+                                            margin-right: 5px;
+                                        }
 
                                     #notification-date {
                                         color: #959595;
@@ -261,10 +280,9 @@ export default styled.div`
                                     #friend-request-buttons {
                                         display: flex;
 
-                                        justify-content: center;
+                                        justify-content: left;
 
                                         margin-top: 10px;
-                                        margin-left: 5%;
                                     }
 
                                         #friend-request-buttons button {
