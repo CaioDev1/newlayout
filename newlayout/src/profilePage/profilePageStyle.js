@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const profilePageStyle = styled.main`
     main {
-        min-height: 600px;
+        min-height: 650px;
         height: 100vh;
         
         min-width: 350px;
@@ -95,6 +95,8 @@ const profilePageStyle = styled.main`
             background: #F2F2F2;
 
             padding: 5%;
+
+            height: 50%;
         }
 
             #profile-user-about ul {
@@ -266,7 +268,7 @@ const profilePageStyle = styled.main`
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     main {
         flex-direction: column;
 

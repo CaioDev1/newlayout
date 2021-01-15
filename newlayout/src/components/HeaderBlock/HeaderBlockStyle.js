@@ -373,6 +373,24 @@ export default styled.div`
                             justify-content: space-between;
                         }
 
+@media screen and (min-width: 500px) and (max-width: 800px) {
+    .button-expansion-block {
+        width: initial;
+        max-width: 500px;
+
+        margin: 0 auto;
+    }
+
+        #notification-header p {
+            font-size: 1rem;
+        }
+
+        #notification-header img {
+            height: 50px;
+            width: 50px;
+        }
+}
+
 @media screen and (min-width: 800px) and (max-width: 1100px) {
     #header-block {
         grid-template-columns: 1fr 2fr;
