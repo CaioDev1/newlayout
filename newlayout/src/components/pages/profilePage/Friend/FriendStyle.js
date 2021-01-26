@@ -4,6 +4,9 @@ const FriendStyle = styled.div`
     #friend-item {
         position: relative;
 
+        display: flex; /*  */
+        justify-content: flex-start;
+
         width: 100%;
 
         min-height: 100px;
@@ -13,49 +16,57 @@ const FriendStyle = styled.div`
         border-radius: 15px;
     }
 
+    #friend-item:hover {
+        background: #2c2c2ca4; 
+    }
+
         #friend-item img {
             /* min-width: 200px;
             min-height: 200px; */
 
+            min-height: 100%;
             width: 100%;
-            height: 100%;
+            max-height: 100px;
+            max-width: 120px;
 
             border-radius: 0;
 
             border-radius: 15px;
 
-            position: absolute;
+            /* position: absolute;
 
             top: -9999px;
             bottom: -9999px;
             left: -9999px;
             right: -9999px;
-            margin: auto;
+            margin: auto; */
         }
 
-        #friend-item span {
-            position: absolute;
+        #friend-item h3 {
+            /* position: absolute;
 
             bottom: 0px;
-
-            min-height: 30%;
+ 
+            min-height: 30%; */
             width: 100%;
 
-            line-height: 15px;
+            font-weight: 500;
 
-            padding: 5px;
+            /* line-height: 15px; */
 
-            text-align: center;
+            padding: 15px;
 
-            background: #2c2c2ca4;
+            /* text-align: center;
+
+            background: #2c2c2ca4; */
 
             display: flex;
 
             align-items: center;
             justify-content: center;
 
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
+            /* border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px; */
         }
 `
 

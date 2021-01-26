@@ -11,6 +11,16 @@ import Friend from '../components/pages/profilePage/Friend/Friend'
 function ProfilePage() {
     const [whichContentBar, setWhichContentBar] = useState('posts')
 
+    function resizeObserver() {
+        let friendsBox = document.querySelector('#profile-user-friends')
+
+        new ResizeObserver(() => {
+            friendsBox.offsetWidth <= 500 
+                ? friendsBox.style.gridTemplateColumns = '1fr' 
+                : friendsBox.style.gridTemplateColumns = '1fr 1fr'
+        }).observe(friendsBox)
+    } 
+
     function handleChangeContent(e) {
         const button = e.target.closest('.change-content-bar-button')
 
@@ -112,7 +122,7 @@ function ProfilePage() {
                                         <Post />
                                     </div>
                                 ) :
-                                <div id='profile-user-friends'>
+                                <div id='profile-user-friends' onLoad={resizeObserver}>
                                     {
                                         [...Array(12)].map(() => {
                                             return (

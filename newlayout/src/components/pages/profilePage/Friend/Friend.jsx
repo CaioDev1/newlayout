@@ -10,7 +10,7 @@ function Friend() {
             <Link to=''>
                 <div id='friend-item'>
                     <img src={process.env.PUBLIC_URL + '/Friends_BT.png'} />
-                    <span>Paulin do gás</span>
+                    <h3>Paulin do gás</h3>
                 </div>
             </Link>
         </Style>

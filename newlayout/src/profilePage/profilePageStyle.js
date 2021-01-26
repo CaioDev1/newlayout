@@ -246,12 +246,14 @@ const profilePageStyle = styled.main`
                 #profile-user-friends {
                     display: grid;
 
-                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-template-columns: 1fr 1fr /* 1fr */;
                     grid-template-rows: repeat(5, 1fr);
 
                     height: 95%;
 
                     gap: 5%;
+
+                    padding: 3%;
                 }
 
 @media screen and (max-width: 1000px) {
