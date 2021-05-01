@@ -16,7 +16,7 @@ function Post({hasImage}) {
                     <UserIcon />
                     <h3 id='post-header-username'>Cornivaldo Carneiro</h3>
                 </div>
-                <span>Postado há 3h atrás</span>
+                <span>Postado 3h atrás</span>
             </div>
             <div id='post-body'>
                 <svg width="28" height="23" viewBox="0 0 28 23" fill="none" xmlns="http://www.w3.org/2000/svg">

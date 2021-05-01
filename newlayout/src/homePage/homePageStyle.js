@@ -4,17 +4,17 @@ export default styled.div`
     #home {
         display: grid;
 
-        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-columns: 1fr 1.8fr 1.1fr;
         grid-template-rows: 1fr;
 
         grid-template-areas: 'b a c';
 
-        gap: 40px;
+        column-gap: 60px;
         
         min-height: 100vh;
         min-width: 350px;
 
-        padding: 20vh 2% 20px;
+        padding: 120px 10px 40px;
 
         background: #E5E5E5;
     }
@@ -24,23 +24,18 @@ export default styled.div`
         }
 
 
-        #left-block, #right-block {
-            /* height: 100%;
-            width: 100%; */
+        #trending-field, #user-field {
+            position: sticky;
 
-            position: relative;
+            top: 100px;
+            left: 0;
+            /* max-height: 80vh; */
+            max-height: calc(100vh - 120px - 15px);
         }
 
         #left-block {
             grid-area: b;
         }
-
-            #user-field {
-                position: fixed;
-
-                min-width: calc(25% - 30px);
-                max-height: calc(80% - 30px);
-            }
 
                 #user-bar, #friends-field {
                     width: 100%;
@@ -53,13 +48,20 @@ export default styled.div`
 
                     background: #1F1E1E;
 
-                    height: 90px;
+                    height: 80px;
 
                     padding: 20px;
                 }
 
+                    #user-bar h3 {
+                        font-weight: 400;
+                    }
+
                     #user-bar #user-icon {
                         margin-right: 15px;
+
+                        height: 50px;
+                        width: 50px;
                     }
 
                 #friends-field {
@@ -84,6 +86,12 @@ export default styled.div`
 
                         #friends-field-header-title {
                             font-weight: 400;
+
+                            font-size: 1.2rem;
+                        }
+
+                        #friends-field-header svg {
+                            height: 1.3rem;
                         }
 
                     #friends-field-data {
@@ -101,21 +109,31 @@ export default styled.div`
                             margin-bottom: 20px;
                         }
 
+                            #friends-content:last-child {
+                                margin-bottom: 0;
+                            }
+
                             #friends-content-info {
                                 display: flex;
 
                                 align-items: center;
+
+                                font-size: 0.9rem;
+                                font-weight: lighter; 
                             }
 
                                 #friends-content-info #user-icon {
                                     margin-right: 20px;
+
+                                    height: 30px;
+                                    width: 30px;
                                 }
 
                             #friends-content-online-status {
-                                height: 10px;
-                                width: 10px;
+                                height: 7px;
+                                width: 7px;
 
-                                background-color: green;
+                                background-color: rgb(0, 253, 0);
 
                                 border-radius: 100px;
                             }
@@ -147,7 +165,7 @@ export default styled.div`
             }
 
                 #newpost-field #user-icon {
-                    margin-right: 30px;
+                    margin-right: 10px;
 
                     position: relative;
 
@@ -161,23 +179,24 @@ export default styled.div`
                 }
 
                 #newpost-field textarea {
-                    width: 80%;
-                    min-height: 50px;
-                    height: 3rem;
+                    width: 90%;
+                    height: 40px;
 
                     border-radius: 100px;
 
                     resize: none;
 
-                    padding: 15px 20px 0;
+                    padding: 10px 20px 0;
 
                     background: #2D2D2D;
 
-                    transition: height .3s ease-out;
+                    transition: all .3s ease;
                 }
 
                 #newpost-field.clicked textarea {
-                    border-radius: 30px;
+                    border-radius: 20px;
+
+                    font-size: 15px;
 
                     height: 10rem;
                 }
@@ -233,15 +252,12 @@ export default styled.div`
             }
 
         #right-block {
-            grid-area: c;
+            grid-area: c; 
         }
 
             #trending-field {
-                position: fixed;
-
-                max-width: calc(25% - 30px);
-                max-height: calc(80% - 20px);
-
+                height: fit-content;
+                
                 overflow-y: scroll;
 
                 background: #1F1E1E;
@@ -258,7 +274,7 @@ export default styled.div`
 
                     font-weight: bold;
 
-                    padding: 15px 0;
+                    padding: 30px 0 15px;
                 }
 
                 #trending-field-posts {
@@ -283,9 +299,9 @@ export default styled.div`
                     #trending-field-post-1 {
                         flex-direction: row;
 
-                        padding: 5% 15%;
+                        padding: 3% 17%;
 
-                        height: 170px;
+                        height: 160px;
 
                         position: relative;
                     }
@@ -297,14 +313,11 @@ export default styled.div`
                         #trending-field-post-1-data {
                             display: flex;
 
-                            align-items: center;
-                            justify-content: space-between;
-
                             flex-direction: column;
                         }
 
-                            #trending-field-post-1-user-icon {
-                                margin: 0 auto;
+                            #trending-field-post-1 #user-icon {
+                                margin: 0 auto 10px;
                             }
 
                             #trending-field-post-1 p, #trending-field-post p {
@@ -313,12 +326,14 @@ export default styled.div`
                                 word-break: break-all;
 
                                 line-height: 1.3;
-
-                                font-size: 13px;
                             }
 
                             #trending-field-post-1 p {
                                 font-size: 0.9rem;
+
+                                font-weight: 500;
+
+                                line-height: 140%;
 
                                 overflow: hidden;
                             }
@@ -329,8 +344,7 @@ export default styled.div`
                                 top: 50%;
                                 right: 4%;
                                 
-
-                                font-size: 1rem;
+                                font-size: 0.9rem;
                             }
 
                             #trending-field-post-1-like-field, #trending-field-post-like-field {
@@ -345,7 +359,7 @@ export default styled.div`
                             }
 
                     #trending-field-post {
-                        height: 100px;
+                        height: 90px;
 
                         padding: 5px;
                     }
@@ -360,6 +374,8 @@ export default styled.div`
 
                         #trending-field-post p {
                             width: 60%;
+
+                            font-size: 0.8rem;
                         }
 
                         #trending-field-post-like-field {    
@@ -369,6 +385,8 @@ export default styled.div`
                         #trending-field-post-like-field svg, #trending-field-post-1-like-field svg {
                             height: 20px;
                             width: 20px;
+
+                            margin-bottom: 3px;
                         }
 
 
@@ -380,10 +398,6 @@ export default styled.div`
 
         #right-block {
             display: none;
-        }
-
-        #user-field {
-            min-width: calc(31%);
         }
     }
 

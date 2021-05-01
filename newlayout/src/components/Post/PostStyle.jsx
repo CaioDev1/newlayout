@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const PostStyle = styled.div`
     #post {
-        width: 90%;
+        width: 95%;
 
         padding: 10px;
     }
@@ -24,11 +24,15 @@ const PostStyle = styled.div`
             }
 
                 #post-header #user-icon {
-                    margin-right: 15px;
+                    margin-right: 10px;
+
+                    height: 45px;
+                    width: 45px;
                 }
 
                 #post-header-username {
                     font-weight: 400;
+                    font-size: 1.1rem;
                 }
 
         #post-header span {
@@ -61,9 +65,9 @@ const PostStyle = styled.div`
             }
 
         #post-content {
-            padding: 5% 5%;
+            padding: 3% 0;
 
-            font-size: 15px;
+            font-size: 0.9rem;
 
             word-break: break-all;
         }
@@ -91,6 +95,10 @@ const PostStyle = styled.div`
                 margin-right: 5px;
             }
 
+            #post-comments-value {
+                color: lightgray;
+            }
+
         #post-footer {
             display: flex;
 
@@ -107,12 +115,14 @@ const PostStyle = styled.div`
                 justify-content: space-between;
 
                 align-items: center;
+
+                font-weight: 600;
             }
             
             #post-footer button svg {
-                height: 25px;
+                height: 20px;
 
-                margin-right: 10px;
+                margin-right: 5px;
             }
 
         .post-heart-icon:hover * {
@@ -147,7 +157,7 @@ const PostStyle = styled.div`
 
                 background: #F2F2F2;
 
-                border-radius: 25px;
+                border-radius: 10px;
 
                 padding: 0 10px;
             }
@@ -161,7 +171,6 @@ const PostStyle = styled.div`
 
             #comment-field-input-body input, #comment-field-input-body input::placeholder {
                 color: #404040;
-                
             }
 
         #public-comments-field {
@@ -170,7 +179,7 @@ const PostStyle = styled.div`
 
             align-items: center;
 
-            padding: 0px 20px 10px;
+            padding: 0px 0px 10px;
         }
 
             #public-comments-field hr {
@@ -187,19 +196,19 @@ const PostStyle = styled.div`
                     margin-bottom: 20px;
                 }
                     #comment #user-icon {
-                        margin-right: 15px;
+                        margin-right: 10px;
 
                         height: 30px;
                         width: 30px;
 
                         position: relative;
 
-                        top: -20px;
+                        top: -10px;
                     }
 
 
                     #comment-body p {
-                        font-size: 14px;
+                        font-size: 0.8rem;
 
                         width: 95%;
                     }
@@ -220,6 +229,11 @@ const PostStyle = styled.div`
 
                             align-items: center;
                         }
+
+                    #comment #increase-like-button {
+                        height: 25px;
+                        width: 25px;
+                    }
         
         #post-image-screen {
             display: flex;
@@ -248,12 +262,6 @@ const PostStyle = styled.div`
                 height: 50vh;
             }
 
-@media screen and (min-width: 800px) and (max-width: 1100px) {
-    #post {
-        width: 100%;
-    }
-}
-
 @media screen and (max-width: 800px) {
     #post {
         width: 100%;
@@ -276,7 +284,10 @@ const PostStyle = styled.div`
     }
 
         #post-header span {
-            margin-left: 55px;
+            margin-left: 50px;
+
+            position: relative;
+            top: -5px;
         }
 }
 `

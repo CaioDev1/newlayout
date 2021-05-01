@@ -4,8 +4,8 @@ export default styled.div`
     #header-block {
         display: grid;
 
-        grid-template-columns: 1fr 2fr 1fr;
-        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1.8fr 1.1fr;
+        grid-template-rows: 80px;
 
         gap: 40px;
 
@@ -16,8 +16,6 @@ export default styled.div`
 
         width: 100%;
         min-width: 350px;
-        min-height: 85px;
-        height: 12%;
 
         padding: 0 2%;
 
@@ -63,10 +61,7 @@ export default styled.div`
                     align-items: center;
                     justify-content: center;
 
-                    padding: 3%;
-
-                    height: 50%;
-                    width: 25%;
+                    padding: 3% 3% 1.5%;
 
                     position: relative;
                 }
@@ -79,8 +74,8 @@ export default styled.div`
                         min-height: 20px;
                         min-width: 20px;
 
-                        height: 100%;
-                        width: 100%;
+                        height: 30px;
+                        width: 30px;
 
                         transition: transform .2s ease-out;
                     }
@@ -92,10 +87,11 @@ export default styled.div`
                         #notification-value-pop-up {
                             position: absolute;
 
+                            font-size: 0.9rem;
                             font-weight: bold;
 
                             left: 50%;
-                            top: 40%;
+                            top: 50%;
 
                             display: flex;
 
@@ -106,8 +102,8 @@ export default styled.div`
 
                             border-radius: 100%;
 
-                            height: 25px;
-                            width: 25px;
+                            height: 10px;
+                            width: 10px;
 
                             padding: 12px;
 
@@ -137,9 +133,6 @@ export default styled.div`
                                         right: -10px;
                                     }
 
-            #header-main-input-field-body, #header-main-input-field-body input {
-                width: 100%;
-            }
 
             #header-main-input-field-body {
                 display: flex;
@@ -150,6 +143,8 @@ export default styled.div`
 
                 min-height: 30px;
                 height: 40%;
+
+                width: 90%;
 
                 padding: 5px 15px;
             }
@@ -359,8 +354,8 @@ export default styled.div`
 
                         border-radius: 100%;
 
-                        height: 35px;
-                        width: 35px;
+                        height: 30px;
+                        width: 30px;
 
                         position: relative;
                     }
