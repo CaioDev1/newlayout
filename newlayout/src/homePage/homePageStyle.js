@@ -1,10 +1,12 @@
 import styled from 'styled-components'
 
 export default styled.div`
+    background: #E5E5E5;
+
     #home {
         display: grid;
 
-        grid-template-columns: 1fr 1.8fr 1.1fr;
+        grid-template-columns: 0.9fr 1.6fr 1fr;
         grid-template-rows: 1fr;
 
         grid-template-areas: 'b a c';
@@ -14,13 +16,15 @@ export default styled.div`
         min-height: 100vh;
         min-width: 350px;
 
-        padding: 120px 10px 40px;
+        max-width: 1920px;
 
-        background: #E5E5E5;
+        margin: 0 auto;
+
+        padding: 120px 10px 40px;
     }
 
         #user-bar, #friends-field, #newpost-field, #feed, #trending-field, #trending-field-post-1, #trending-field-post {
-            border-radius: 15px;
+            border-radius: 12px;
         }
 
 
@@ -186,7 +190,7 @@ export default styled.div`
 
                     resize: none;
 
-                    padding: 10px 20px 0;
+                    padding: 12px 20px 0;
 
                     background: #2D2D2D;
 
@@ -202,7 +206,9 @@ export default styled.div`
                 }
 
                     #newpost-field textarea::placeholder {
-                        font-size: 15px;
+                        font-size: 14px;
+
+                        font-weight: lighter;
                     }
 
                     #newpost-field-options {
@@ -270,7 +276,7 @@ export default styled.div`
                 #trending-field-title {
                     text-align: center;
 
-                    font-size: 1.5rem;
+                    font-size: 1.7rem;
 
                     font-weight: bold;
 
@@ -285,7 +291,7 @@ export default styled.div`
                     height: 100%;
                     width: 100%;
 
-                    padding: 0 10px;
+                    padding: 0 15px;
                 }
 
                     #trending-field-post, #trending-field-post-1 {
@@ -359,7 +365,7 @@ export default styled.div`
                             }
 
                     #trending-field-post {
-                        height: 90px;
+                        height: 85px;
 
                         padding: 5px;
                     }

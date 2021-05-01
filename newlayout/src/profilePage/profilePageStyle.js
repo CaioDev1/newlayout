@@ -28,6 +28,13 @@ const profilePageStyle = styled.main`
             color: #1E1E1E;
         }
 
+            #profile-user-container {
+                width: 100%;
+                max-width: 800px;
+
+                margin: 0 auto;
+            }
+
             #profile-user-header, #profile-user-header-info-name, #profile-user-header-info-historic {
                 display: flex;
 
@@ -116,8 +123,8 @@ const profilePageStyle = styled.main`
                     #profile-user-about svg {
                         margin-right: 20px;
 
-                        min-height: 50px;
-                        min-width: 50px;
+                        height: 40px;
+                        width: 40px;
 
                         display: flex;
                     }
@@ -167,7 +174,8 @@ const profilePageStyle = styled.main`
                     .change-content-bar-button span {
                         opacity: 0;
                         width: 0;
-                        
+
+                        overflow: hidden;
 
                         font-size: 1rem;
 
@@ -216,13 +224,13 @@ const profilePageStyle = styled.main`
 
                 position: relative;
 
-                padding: 5% 1%;
+                padding: 3% 1%;
             }
             
                 #content-title {
-                    font-size: 2rem;
+                    font-size: 1.6rem;
 
-                    padding-bottom: 10px;
+                    padding-bottom: 15px;
                     padding-left: 10px;
                 }
 

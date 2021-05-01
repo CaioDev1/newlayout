@@ -5,7 +5,7 @@ export default styled.div`
         display: grid;
 
         grid-template-columns: 1fr 1.8fr 1.1fr;
-        grid-template-rows: 80px;
+        grid-template-rows: 75px;
 
         gap: 40px;
 
@@ -17,7 +17,7 @@ export default styled.div`
         width: 100%;
         min-width: 350px;
 
-        padding: 0 2%;
+        padding: 0 1%;
 
         box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.15);
 
@@ -36,7 +36,7 @@ export default styled.div`
         }
 
         #header-left svg {
-            width: 130px;
+            width: 80px;
             height: 20px;
         }
 
@@ -137,19 +137,22 @@ export default styled.div`
             #header-main-input-field-body {
                 display: flex;
 
-                background: #404040;
+                background: #1F1E1E;
 
                 border-radius: 100px;
 
                 min-height: 30px;
                 height: 40%;
 
-                width: 90%;
+                width: 80%;
 
                 padding: 5px 15px;
             }
 
                 #header-main-input-field-body svg {
+                    min-height: 15px;
+                    min-width: 15px;
+
                     height: 100%;
 
                     margin-right: 15px;
@@ -224,6 +227,7 @@ export default styled.div`
                                     width: 100%;
 
                                     justify-content: space-between;
+                                    align-items: center;
 
                                     padding: 10px 0 5px;
                                 }
@@ -391,6 +395,10 @@ export default styled.div`
         grid-template-columns: 1fr 2fr;
         grid-template-areas: 'b a';
     }
+
+        #header-main-input-field-body {
+            width: 100%;
+        }
 
     #header-right {
         display: none;

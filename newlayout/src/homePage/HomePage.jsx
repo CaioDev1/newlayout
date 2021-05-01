@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-import Style from './homePageStyle.js'
+import HomePageContainerStyle from './homePageStyle.js'
 
 import TrendingPost from '../components/pages/homePage/RightBlock/TrendingPost'
 import UserIcon from '../components/UserIcon/UserIcon'
@@ -15,7 +15,7 @@ function App() {
     const [isMouseOverOnOptions, setIsMouseOverOnOptions] = useState(false)
 
     return (
-        <Style>
+        <HomePageContainerStyle>
             <main id='home'>
                 <HeaderBlock />
                 <aside id='left-block'>
@@ -98,7 +98,7 @@ function App() {
                     </div>
                 </aside>
             </main>
-        </Style>
+        </HomePageContainerStyle>
     )
 }
 
