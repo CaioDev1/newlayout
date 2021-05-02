@@ -348,12 +348,7 @@ export default styled.div`
                         justify-content: flex-end;
                     }
 
-                    #header-right-options {
-                        display: flex;
-
-                        align-items: center;
-                        justify-content: center;
-
+                    #header-right-options { 
                         background: #2A2A2A;
 
                         border-radius: 100%;
@@ -364,13 +359,43 @@ export default styled.div`
                         position: relative;
                     }
 
+                        #header-right-options svg {
+                            height: 10px;
+                            width: 10px;
+                        }
+
                         /* DENTRO DO BUTTONEXPANSIONBLOCK */
-                        
                         #header-right-options-exit {
                             font-weight: 700;
 
                             justify-content: space-between;
                         }
+
+@media screen and (min-width: 1367px) {
+    #header-block {
+        grid-template-rows: 115px;
+    }
+
+        #header-left svg {
+            width: 110px;
+            height: 20px;
+        }
+
+        #header-main-button-field a svg {
+            height: 40px;
+            width: 40px;
+        }
+
+        #header-right-options {
+            height: 40px;
+            width: 40px;
+        }
+
+            #header-right-options svg {
+                height: 15px;
+                width: 15px;
+            }
+}
 
 @media screen and (min-width: 500px) and (max-width: 800px) {
     .button-expansion-block {

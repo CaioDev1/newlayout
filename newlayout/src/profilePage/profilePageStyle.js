@@ -63,7 +63,7 @@ const profilePageStyle = styled.main`
                     }
 
                     #profile-user-header-info-name {
-                        font-size: 2.3rem;
+                        font-size: 2rem;
 
                         min-width: 200px;
                     }
