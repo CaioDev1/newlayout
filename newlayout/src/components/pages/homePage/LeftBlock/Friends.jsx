@@ -7,7 +7,7 @@ function Friends() {
         <div id='friends-content'>
             <div id='friends-content-info'>
                 <UserIcon />
-                <p>Cornaldo</p>
+                <p>Gabriel Barbosa</p>
             </div>
             <div id='friends-content-online-status'></div>
         </div>

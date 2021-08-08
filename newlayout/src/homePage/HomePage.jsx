@@ -22,7 +22,7 @@ function App() {
                     <div id='user-field'>
                         <div id='user-bar' className='top-bar'>
                             <UserIcon />
-                            <h3>Cornivaldo Carneiro</h3>
+                            <h3>Fernando Carneiro</h3>
                         </div>
                         <div id='friends-field'>
                             <div id='friends-field-header'>
@@ -86,7 +86,7 @@ function App() {
                 </section>
                 <aside id='right-block'>
                     <div id='trending-field'>
-                        <h4 id='trending-field-title'>Cornos mais famosos</h4>
+                        <h4 id='trending-field-title'>Usuários mais famosos</h4>
     
                         <div id='trending-field-posts'>
                             <TrendingPost top={true}/>

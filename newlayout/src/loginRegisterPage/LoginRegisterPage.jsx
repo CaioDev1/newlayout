@@ -19,11 +19,11 @@ function LoginRegisterPageBase({page}) {
                                     <path d="M22.1963 35H43.3925L53.5981 33.8667L63.8037 32.1667L74.7944 29.9L85 27.6333V16.3L65.3738 19.7L43.3925 23.6667H19.8411L13.5607 21.4L5.71028 14.0333L2.57009 8.36667L1 1V17.4333L7.28037 27.0667L22.1963 35Z" fill="#191919" stroke="#191919"/>
                                     <path d="M196.804 35H175.607L165.402 33.8667L155.196 32.1667L144.206 29.9L134 27.6333V16.3L153.626 19.7L175.607 23.6667H199.159L205.439 21.4L213.29 14.0333L216.43 8.36667L218 1V17.4333L211.72 27.0667L196.804 35Z" fill="#191919" stroke="#191919"/>
                                 </svg>    
-                                <h1>CORNOBOOK</h1>
-                                <h5>The social media to share your gaias</h5>
+                                <h1>IDEABOOK</h1>
+                                <h5>The social media to share your ideas</h5>
                             </>
                         ) :
-                        <h1>Chifre não existe, isso é apenas coisa que colocam na sua cabeça.</h1>
+                        <h1>Share your ideas and create a whole new world!</h1>
                     }
                 </div>
             </section>

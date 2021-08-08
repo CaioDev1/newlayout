@@ -262,6 +262,18 @@ const PostStyle = styled.div`
                 height: 50vh;
             }
 
+@media screen and (min-width: 1367px) {
+    #post-header-username {
+        font-size: 1.2rem;
+    }
+    #post-header span {
+        font-size: 0.7rem;
+    }
+    #post-content {
+        font-size: 1rem;
+    }
+}
+
 @media screen and (max-width: 800px) {
     #post {
         width: 100%;

@@ -6,7 +6,7 @@ export default styled.div`
     #home {
         display: grid;
 
-        grid-template-columns: 0.9fr 1.6fr 1fr;
+        grid-template-columns: 0.9fr 1.65fr 1fr;
         grid-template-rows: 1fr;
 
         grid-template-areas: 'b a c';
@@ -25,6 +25,8 @@ export default styled.div`
 
         #user-bar, #friends-field, #newpost-field, #feed, #trending-field, #trending-field-post-1, #trending-field-post {
             border-radius: 12px;
+
+            box-shadow: 0px 0px 40px rgb(0 0 0 / 25%);
         }
 
 
@@ -194,6 +196,8 @@ export default styled.div`
 
                     background: #2D2D2D;
 
+                    box-shadow: 0px 0px 40px rgb(0 0 0 / 35%);
+
                     transition: all .3s ease;
                 }
 
@@ -264,7 +268,7 @@ export default styled.div`
             #trending-field {
                 height: fit-content;
                 
-                overflow-y: scroll;
+                overflow-y: auto;
 
                 background: #1F1E1E;
             }
@@ -360,8 +364,8 @@ export default styled.div`
                                 justify-content: center;
                                 align-items: center;
 
-                                height: 40px;
-                                width: 30px;
+                                min-height: 40px;
+                                min-width: 30px;
                             }
 
                     #trending-field-post {
@@ -394,6 +398,87 @@ export default styled.div`
 
                             margin-bottom: 3px;
                         }
+
+    @media screen and (min-width: 1367px) {
+        #home {
+            column-gap: 80px;
+            padding: 210px 30px 40px;
+        }
+            #user-icon {
+                height: 60px;
+                width: 60px;
+            }
+            #newpost-field, #user-bar {
+                min-height: 115px;
+            }
+            #user-bar {
+                font-size: 1.2rem;
+            }
+                #user-bar #user-icon {
+                    height: 75px;
+                    width: 75px;
+                }
+            #friends-field-header-title {
+                font-size: 1.5rem;
+            }
+            #friends-field-header svg {
+                height: 30px;
+                width: 30px;
+            }
+            #friends-content-info #user-icon {
+                height: 40px;
+                width: 40px;
+            }
+            #friends-content-info p {
+                font-size: 1.1rem;
+            }
+            #friends-content-online-status {
+                height: 10px;
+                width: 10px;
+            }
+            #newpost-field textarea {
+                height: 60px;
+                padding-top: 1rem;
+                font-size: 1.2rem;
+            }
+                #newpost-field textarea::placeholder {
+                    font-size: 1.1rem;
+                }
+            #trending-field, #user-field {
+                max-height: calc(100vh - 210px - 15px);
+            }
+                
+            #trending-field-title {
+                font-size: 2rem;
+            }
+            #trending-field-post-1 #user-icon,
+            #trending-field-post #user-icon {
+                height: 50px;
+                width: 50px;
+            }
+            #trending-field-post-1 {
+                height: 190px;
+            }
+                #trending-field-post-1 p {
+                    font-size: 1.1rem;
+                }
+                #trending-field-post-1-like-field,
+                #trending-field-post-like-field {
+                    font-size: 1rem;
+                }
+                    #trending-field-post-1-like-field svg,
+                    #trending-field-post-like-field svg {
+                        height: 30px;
+                        width: 30px;
+                    }
+            #trending-field-post {
+                height: 100px;
+            }
+                #trending-field-post p {
+                    font-size: 1rem;
+                }
+        
+    }
 
 
     @media screen and (min-width: 800px) and (max-width: 1100px) {

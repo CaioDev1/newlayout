@@ -35,7 +35,7 @@ function ProfilePhotoPage() {
             <main id='profile-photo-page'>
                 <HeaderBlock />
                 <section id='profile-photo-page-content'>
-                    <h1 id='profile-photo-page-content-title'>Sinta-se em casa, somos todos cornos :)</h1>
+                    <h1 id='profile-photo-page-content-title'>Sinta-se em casa, somos todos criativos aqui :)</h1>
     
                     <div>
                         <div id='profile-photo-page-info-field'>

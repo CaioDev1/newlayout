@@ -178,6 +178,7 @@ export default styled.div`
                     
                     box-shadow: 4px 4px 65px rgba(0, 0, 0, 0.3);
 
+                    border: 2px solid aliceblue;
                     border-radius: 15px;
 
                     z-index: 2;
@@ -349,11 +350,6 @@ export default styled.div`
                     }
 
                     #header-right-options {
-                        display: flex;
-
-                        align-items: center;
-                        justify-content: center;
-
                         background: #2A2A2A;
 
                         border-radius: 100%;
@@ -364,6 +360,11 @@ export default styled.div`
                         position: relative;
                     }
 
+                        #header-right-options > svg {
+                            height: 10px;
+                            width: 10px;
+                        }
+
                         /* DENTRO DO BUTTONEXPANSIONBLOCK */
                         
                         #header-right-options-exit {
@@ -371,6 +372,33 @@ export default styled.div`
 
                             justify-content: space-between;
                         }
+
+                            #header-right-options-exit svg {
+                                height: 30px;
+                                width: 20px;
+                            }
+
+@media screen and (min-width: 1367px) {
+    #header-block {
+        grid-template-rows: 115px;
+    }
+        #header-left svg {
+            width: 110px;
+            height: 20px;
+        }
+        #header-main-button-field a svg {
+            height: 40px;
+            width: 40px;
+        }
+        #header-right-options {
+            height: 40px;
+            width: 40px;
+        }
+            #header-right-options svg {
+                height: 15px;
+                width: 15px;
+            }
+}
 
 @media screen and (min-width: 500px) and (max-width: 800px) {
     .button-expansion-block {

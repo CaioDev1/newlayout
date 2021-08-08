@@ -14,7 +14,7 @@ function Post({hasImage}) {
             <div id='post-header'>
                 <div id='post-header-user-info'>
                     <UserIcon />
-                    <h3 id='post-header-username'>Cornivaldo Carneiro</h3>
+                    <h3 id='post-header-username'>Fernando Carneiro</h3>
                 </div>
                 <span>Postado 3h atrás</span>
             </div>
