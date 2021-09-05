@@ -1,70 +1,139 @@
-# Getting Started with Create React App
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://caiodev1.github.io/newlayout/#/">
+    <img src="public/image.png" alt="Logo">
+  </a>
 
-In the project directory, you can run:
+  <h3 align="center">Mindzone New Layout Prototype</h3>
 
-### `npm start`
+  <p align="center">
+    Protótipo do novo layout/UI da aplicação Mindzone
+    <br />
+    <a href="https://caiodev1.github.io/newlayout/#/"><strong>Abrir app »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/CaioDev1/newlayout/issues">Reportar Bug</a>
+    .
+    <a href="https://github.com/CaioDev1/newlayout/issues">Requisitar funcionalidades</a>
+  </p>
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Sumário</summary>
+  <ol>
+    <li>
+      <a href="#sobre-o-projeto">Sobre o projeto</a>
+      <ul>
+        <li><a href="#feito-utilizando">Feito utilizando</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#iniciando">Iniciando</a>
+      <ul>
+        <li><a href="#instalação">Instalação</a></li>
+      </ul>
+    </li>
+    <li><a href="#mais-informações">Mais informações</a></li>
+    <li><a href="#licença">Licença</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ol>
+</details>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<!-- ABOUT THE PROJECT -->
+<h2 id="sobre-o-projeto">💡 Sobre o projeto</h2>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+[![Product Name Screen Shot][product-screenshot]](https://caiodev1.github.io/newlayout/#/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Esse projeto é um protótipo de interface da aplicação Mindzone, uma rede social para nicho criativo, nesse novo layout a intenção é criar um ambiente mais minimalista e mais "clean" com relação ao design,
+assimilando mais a experiência de uso de outras redes sociais do mercado, com uma navegação mais simples e natural.
 
-### `npm run eject`
+[![Product Name Screen Shot2][product-screenshot2]](https://caiodev1.github.io/newlayout/#/)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* Acesse a conteúdo de notificações e mensagem na tela inicial;
+* Visualize os amigos que estão online;
+* Aproveite de uma interface mais limpa e agradável;
+* Comentários acessíveis ainda no feed;
+* Visualize os amigos e postagens de um usuário com 1 clique;
+* Edite os dados do seu perfil;
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<h3 id="feito-utilizando">🔧 Feito Utilizando</h3>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Para uma maior fluídez da aplicação na parte do frontend, foi utilizado ReactJS junto com a biblioteca Styled Components para estilização e Material UI para animações.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Segue a lista de ferramentas:
+* [ReactJS](https://pt-br.reactjs.org/)
+* [Styled Components](https://styled-components.com/)
+* [Material UI](https://material-ui.com/pt/)
 
-## Learn More
+<!-- GETTING STARTED -->
+<h2 id="Iniciando">📖 Iniciando</h2>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Para inicialização correta da aplicação, primeiro é necessário que o NodeJS e o gerenciador de pacotes NPM esteja instalado e atualizado.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Para isso, siga os seguintes passos:
 
-### Code Splitting
+<h3 id="instalação">⚙ Instalação</h3>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Clone o repositório
+   ```sh
+   git clone https://github.com/CaioDev1/newlayout.git
+   ```
+2. Instale os pacotes e dependências via NPM
+   ```sh
+   npm install
+   ```
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<!-- USAGE EXAMPLES -->
+<h2 id="mais-informações">ℹ API</h2>
+Para acessar o repositório com o layout original:
 
-### Making a Progressive Web App
+_[Mindzone](https://github.com/CaioDev1/socialmedia-frontend)_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<!-- LICENSE -->
+<h2 id="licença">📜 Licença</h2>
 
-### Advanced Configuration
+Distribuído sobre a licença MIT. Veja `LICENSE` para mais informações.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+<!-- CONTACT -->
+<h2 id="contato">📩 Contato</h2>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Caio Cardoso - [@itsme_caio](https://instagram.com/itsme_caio) - imcaiofelipe@outlook.com
 
-### `npm run build` fails to minify
+Link do projeto: [https://github.com/CaioDev1/newlayout](https://github.com/CaioDev1/newlayout)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/CaioDev1/newlayout.svg?style=for-the-badge
+[contributors-url]: https://github.com/CaioDev1/newlayout/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/CaioDev1/newlayout.svg?style=for-the-badge
+[forks-url]: https://github.com/CaioDev1/newlayout/network/members
+[stars-shield]: https://img.shields.io/github/stars/CaioDev1/newlayout.svg?style=for-the-badge
+[stars-url]: https://github.com/CaioDev1/newlayout/stargazers
+[issues-shield]: https://img.shields.io/github/issues/CaioDev1/newlayout.svg?style=for-the-badge
+[issues-url]: https://github.com/CaioDev1/newlayout/issues
+[license-shield]: https://img.shields.io/github/license/CaioDev1/newlayout.svg?style=for-the-badge
+[license-url]: https://github.com/CaioDev1/newlayout/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/caio-cardoso-158133196
+[product-screenshot]: public/newlayout-gif1.gif
+[product-screenshot2]: public/newlayout-gif2.gif
