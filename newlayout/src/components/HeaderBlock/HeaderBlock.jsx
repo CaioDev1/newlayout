@@ -103,8 +103,8 @@ function HeaderBlock() {
                                     </div>
                                 </div>
                                 <div id='generic-notifications-field'>
-                                    <Notification message content='Volta pra mim bb, tu sabe que meu dinheiro ta indo todo pra Ambev' />
-                                    <Notification message content='Bom dia sua desgraça dos infernos ardentes do submundo'/>
+                                    <Notification message content='Tô precisando de uma sugestão para meu texto, vais tá livre essa semana?' />
+                                    <Notification message content='Oii!!'/>
                                 </div>
                             </ButtonExpansionBlock>
                         )

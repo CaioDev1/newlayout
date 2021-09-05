@@ -9,7 +9,7 @@ function Notification({children, message, content}) {
             <UserIcon />
             <div>
                 <p>
-                    <strong>Cornivaldo Carneiro</strong> 
+                    <strong>José Figueiredo</strong> 
                     {message && <br />} 
                     {content}
                 </p>
