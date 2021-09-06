@@ -99,10 +99,37 @@ Para isso, siga os seguintes passos:
 
 
 <!-- USAGE EXAMPLES -->
-<h2 id="mais-informações">ℹ API</h2>
+<h2 id="mais-informações">ℹ Mais Informações</h2>
 Para acessar o repositório com o layout original:
 
 _[Mindzone](https://github.com/CaioDev1/socialmedia-frontend)_
+
+<!-- ROUTES -->
+<h2 id="rotas">🛣 Rotas</h2>
+<table>
+  <thead>
+    <tr>
+      <th>ROTA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>/register</td>
+    </tr>
+    <tr>
+      <td>/login</td>
+    </tr>
+    <tr>
+      <td>/</td>
+    </tr>
+    <tr>
+      <td>/profile</td>
+    </tr>
+    <tr>
+      <td>/profile-photo</td>
+    </tr>
+  </tbody>
+</table>
 
 <!-- LICENSE -->
 <h2 id="licença">📜 Licença</h2>
