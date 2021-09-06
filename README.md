@@ -70,6 +70,10 @@ assimilando mais a experiência de uso de outras redes sociais do mercado, com u
 * Visualize os amigos e postagens de um usuário com 1 clique;
 * Edite os dados do seu perfil;
 
+[![Product Name Screen Shot3][product-screenshot3]](https://caiodev1.github.io/newlayout/#/)
+[![Product Name Screen Shot4][product-screenshot4]](https://caiodev1.github.io/newlayout/#/)
+[![Product Name Screen Shot5][product-screenshot5]](https://caiodev1.github.io/newlayout/#/)
+
 <h3 id="feito-utilizando">🔧 Feito Utilizando</h3>
 
 Para uma maior fluídez da aplicação na parte do frontend, foi utilizado ReactJS junto com a biblioteca Styled Components para estilização e Material UI para animações.
@@ -164,3 +168,6 @@ Link do projeto: [https://github.com/CaioDev1/newlayout](https://github.com/Caio
 [linkedin-url]: https://www.linkedin.com/in/caio-cardoso-158133196
 [product-screenshot]: public/newlayout-gif1.gif
 [product-screenshot2]: public/newlayout-gif2.gif
+[product-screenshot3]: public/newlayout-img1.jpeg
+[product-screenshot4]: public/newlayout-img2.jpeg
+[product-screenshot5]: public/newlayout-img3.jpeg
